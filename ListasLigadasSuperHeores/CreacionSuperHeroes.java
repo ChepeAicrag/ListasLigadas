@@ -2,21 +2,6 @@
 import java.util.*;
 public class CreacionSuperHeroes
 {
-    /* public static void main(){
-        LinkedListPlusRecursividadGenerico <SuperHeroe> lista = new LinkedListPlusRecursividadGenerico();
-        
-        /**Ejecucion del metodo que llena una lista*/
-    /*    LlenarLista(lista,arregloSuperHeroes());
-        
-        /**Ejecucion del metodo que imprimir la lista al reves*/
-    /*    lista.imprimirNormal();    
-        
-        /**Prueba de buscar quien está antes de batman*/
-     /*   StdOut.println(lista.getInfo(lista.BuscarAntesDe(new SuperHeroe("Batman", "ser rico",'H'))));
-   
-   
-   /**Metodos para crear superhores y agregar a la lista*/
-   
    public static void LlenarLista(LinkedListPlusRecursividadGenerico lista, Vector<SuperHeroe> s){
        for(int i = 0; i < s.size(); i++) 
        lista.insertarPrimero(s.elementAt(i));
@@ -40,6 +25,8 @@ public class CreacionSuperHeroes
         SuperHeroe misterMiracle  = new SuperHeroe("Mister Miracle","artista del escape",'H');
         SuperHeroe firestorm      = new SuperHeroe("Firestorm","expulsion de fuego",'H');
         SuperHeroe atomo          = new SuperHeroe("Atomo","reducir su cuerpo",'H');
+        SuperHeroe atomo2          = new SuperHeroe("Atomo2","reducir su cuerpo",'H');
+        SuperHeroe atomo3          = new SuperHeroe("Atomo3","reducir su cuerpo",'H');
         
         superheroes.add(superman);
         superheroes.add(batman);
@@ -57,6 +44,8 @@ public class CreacionSuperHeroes
         superheroes.add(misterMiracle);
         superheroes.add(firestorm);
         superheroes.add(atomo);
+        superheroes.add(atomo2);
+        superheroes.add(atomo3);
         return superheroes;
     }  
     

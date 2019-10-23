@@ -1,8 +1,12 @@
-public class SuperHeroe
+import java.io.*;
+public class SuperHeroe implements Serializable
 {
    private String nombre;
    private char sexo;
    private String poder; 
+   private int añoAparicion;
+   private String debilidad;
+   
    public SuperHeroe(String nombre, String poder, char sexo){
        this.nombre = nombre;
        this.poder  = poder;
@@ -20,9 +24,17 @@ public class SuperHeroe
    public String getPoder(){
        return poder;
     } 
+   
+   public String getDebilidad(){
+       return debilidad;
+    } 
+   
+   public int getAñoAparicion(){
+       return añoAparicion;
+    } 
     
    public String toString(){
-       return " " + getNombre() + " \t||\t " + getPoder() + "\n";
+       return " → " + getNombre() + "\n";
     } 
     
    public boolean equals(Object obj){

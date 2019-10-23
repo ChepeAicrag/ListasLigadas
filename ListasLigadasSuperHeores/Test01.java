@@ -27,6 +27,16 @@ public class Test01
         
         StdOut.println("Buscando a \" Atomo \" \n " 
                         + lista.Buscar(atomo));
+        
+        StdOut.println("Buscando a superhores con poder de \" reducir su cuerpo \" \n "); 
+        lista.listaPoderTal("reducir su cuerpo").imprimirNormal();
+        
+        StdOut.println("Buscando a los superheroes \" Hombre \" \n ");
+        lista.listaSexoTal('H').imprimirNormal();
+        
+        StdOut.println("Buscando a los superheroes \" Mujer \" \n ");
+        lista.listaSexoTal('M').imprimirNormal();
+        
     }
     
     

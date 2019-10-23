@@ -1,4 +1,4 @@
-
+import java.util.*;
 public class LinkedListPlusRecursividadGenerico<E> {
     
     private class Nodo {
@@ -74,5 +74,45 @@ public class LinkedListPlusRecursividadGenerico<E> {
     
     public void imprimirNormal(){
         StdOut.println(imprimirNormal(raiz));
+    }
+    
+    /**Obtener una lista en forma de vector*/
+    
+    public Vector<E> formaVector(){
+        Vector<E> vecTemp = new Vector <E>();
+        Nodo temp = raiz;
+        while(temp != null){
+            vecTemp.add(temp.info);
+            temp = temp.sig;
+        }
+        return vecTemp;
+    }
+    
+    public LinkedListPlusRecursividadGenerico<E> llenarListaVector(Vector <E> vec){
+        LinkedListPlusRecursividadGenerico <E> lista = new LinkedListPlusRecursividadGenerico();
+        for(int i = 0; i < vec.size(); i++)
+            lista.insertarPrimero(vec.elementAt(i));
+        return lista;    
+    }
+    
+    /**Estos metodos no estoy seguro de que vayan aqui*/
+    
+    //Retorna una lista de los que tienen el mismo poder
+    public LinkedListPlusRecursividadGenerico<E> listaPoderTal(String poder){
+        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
+            for(Nodo i = raiz; i != null; i = i.sig){
+                if(((SuperHeroe)(i.info)).getPoder().equals(poder))
+                    lista.insertarPrimero(((E)(i.info)));
+            }
+        return lista;
+    }
+    
+    public LinkedListPlusRecursividadGenerico<E> listaSexoTal(char sexo){
+        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
+            for(Nodo i = raiz; i != null; i = i.sig){
+                if(((SuperHeroe)(i.info)).getSexo() == sexo)
+                    lista.insertarPrimero(((E)(i.info)));
+            }
+        return lista;
     }
 }
