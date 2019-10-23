@@ -1,12 +1,10 @@
-
-
-public class Test01
+public class Test04
 {
-    public static void main(){
+   public static void main(){
         LinkedListPlusRecursividadGenerico <String> lista = new LinkedListPlusRecursividadGenerico();
         String x = "Prueba de busqueda";
         for(int i = 0; i < x.length() - 1; i++)
-            lista.insertarPrimero("" + x.charAt(i) + "" + x.charAt(i+1));
+            lista.insertarPrimero("" + x.charAt(i));
         
         lista.imprimirNormal();
         lista.imprimirInversa();

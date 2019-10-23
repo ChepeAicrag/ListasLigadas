@@ -1,12 +1,4 @@
 
-
-/**Lista simplemente ligada de los superhores DC COMICS 
-   Recorrer e imprimir
-   Decir si está o n
-   Decir si está antes de o despues de 
-   Posteriormente convertir doblemente ligada
-   */
-
 public class LinkedListPlusRecursividadGenerico<E> {
     
     private class Nodo {
@@ -26,15 +18,30 @@ public class LinkedListPlusRecursividadGenerico<E> {
         return raiz;
     }
     
-    public Nodo BuscarAntesDe(E x){
+    public Nodo AntesDe(E x){
         for(Nodo i = raiz; i.sig != null; i = i.sig)
             if(i.sig.info.equals(x))
                 return i;
         return null; 
     }
     
+    public Nodo DespuesDe(E x){
+         for(Nodo i = raiz; i != null; i = i.sig)
+            if(i.info.equals(x))
+                return i.sig;
+        return null; 
+    }
+    
+    
+    public boolean Buscar(E x){
+         for(Nodo i = raiz; i != null; i = i.sig)
+            if(i.info.equals(x))
+                return true;
+        return false; 
+    }
+    
     public void Eliminar(E x){
-        Nodo temp = BuscarAntesDe(x);
+        Nodo temp = AntesDe(x);
         if(raiz.info.equals(x))
            raiz = raiz.sig;
         if(temp!=null)
