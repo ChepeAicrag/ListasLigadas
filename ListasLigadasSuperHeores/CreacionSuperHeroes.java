@@ -1,14 +1,14 @@
 
+
+/**
+ * Clase solo para crear a los superheroes
+   */
+
 import java.util.*;
 public class CreacionSuperHeroes
 {
-   public static void LlenarLista(LinkedListPlusRecursividadGenerico lista, Vector<SuperHeroe> s){
-       for(int i = 0; i < s.size(); i++) 
-       lista.insertarPrimero(s.elementAt(i));
-    }
-   
-   public static Vector<SuperHeroe> arregloSuperHeroes(){
-        Vector <SuperHeroe> superheroes = new Vector();
+   public static void  llenarSuperHeroes(LinkedListPlusRecursividadGenerico superheroes){
+        //LinkedListPlusRecursividadGenerico <SuperHeroe> superheroes = new LinkedListPlusRecursividadGenerico();
         SuperHeroe superman       = new SuperHeroe("Spiderman","super fuerza, velocidad",'H');
         SuperHeroe batman         = new SuperHeroe("Batman", "ser rico",'H');
         SuperHeroe mujerMaravilla = new SuperHeroe("Mujer maravilla", "lazo de verdad",'M');
@@ -28,25 +28,24 @@ public class CreacionSuperHeroes
         SuperHeroe atomo2          = new SuperHeroe("Atomo2","reducir su cuerpo",'H');
         SuperHeroe atomo3          = new SuperHeroe("Atomo3","reducir su cuerpo",'H');
         
-        superheroes.add(superman);
-        superheroes.add(batman);
-        superheroes.add(mujerMaravilla);
-        superheroes.add(robbin);
-        superheroes.add(flash);
-        superheroes.add(linternaVerde);
-        superheroes.add(aquaman);
-        superheroes.add(hombreHalcon);
-        superheroes.add(shazam);
-        superheroes.add(capitanAtomo);
-        superheroes.add(flechaVerde);
-        superheroes.add(detecMarciano);
-        superheroes.add(rocketRed);
-        superheroes.add(misterMiracle);
-        superheroes.add(firestorm);
-        superheroes.add(atomo);
-        superheroes.add(atomo2);
-        superheroes.add(atomo3);
-        return superheroes;
+        superheroes.insertarPrimero(superman);
+        superheroes.insertarPrimero(batman);
+        superheroes.insertarPrimero(mujerMaravilla);
+        superheroes.insertarPrimero(robbin);
+        superheroes.insertarPrimero(flash);
+        superheroes.insertarPrimero(linternaVerde);
+        superheroes.insertarPrimero(aquaman);
+        superheroes.insertarPrimero(hombreHalcon);
+        superheroes.insertarPrimero(shazam);
+        superheroes.insertarPrimero(capitanAtomo);
+        superheroes.insertarPrimero(flechaVerde);
+        superheroes.insertarPrimero(detecMarciano);
+        superheroes.insertarPrimero(rocketRed);
+        superheroes.insertarPrimero(misterMiracle);
+        superheroes.insertarPrimero(firestorm);
+        superheroes.insertarPrimero(atomo);
+        superheroes.insertarPrimero(atomo2);
+        superheroes.insertarPrimero(atomo3);
     }  
     
 }

@@ -32,7 +32,6 @@ public class LinkedListPlusRecursividadGenerico<E> {
         return null; 
     }
     
-    
     public boolean Buscar(E x){
          for(Nodo i = raiz; i != null; i = i.sig)
             if(i.info.equals(x))
@@ -115,4 +114,23 @@ public class LinkedListPlusRecursividadGenerico<E> {
             }
         return lista;
     }
+    
+    public LinkedListPlusRecursividadGenerico<E> listaAñoApaircionTal(int añoAparicion){
+        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
+            for(Nodo i = raiz; i != null; i = i.sig){
+                if(((SuperHeroe)(i.info)).getAñoAparicion() == añoAparicion)
+                    lista.insertarPrimero(((E)(i.info)));
+            }
+        return lista;
+    }
+    
+    public LinkedListPlusRecursividadGenerico<E> listaDebilidadTal(String debilidad){
+        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
+            for(Nodo i = raiz; i != null; i = i.sig){
+                if(((SuperHeroe)(i.info)).getDebilidad().equals(debilidad))
+                    lista.insertarPrimero(((E)(i.info)));
+            }
+        return lista;
+    }
+    
 }

@@ -2,10 +2,8 @@
 public class Test01
 {
     public static void main(){
-        CreacionSuperHeroes creacion = new CreacionSuperHeroes();
-        LinkedListPlusRecursividadGenerico <SuperHeroe> lista = new LinkedListPlusRecursividadGenerico();
-        creacion.LlenarLista(lista,creacion.arregloSuperHeroes());
-        
+        LinkedListPlusRecursividadGenerico <SuperHeroe> lista = new LinkedListPlusRecursividadGenerico() ;
+        CreacionSuperHeroes.llenarSuperHeroes(lista);
         /**Mostrar la lista*/
         lista.imprimirNormal();
         
