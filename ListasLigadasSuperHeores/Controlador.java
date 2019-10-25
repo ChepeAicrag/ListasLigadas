@@ -42,11 +42,17 @@ public class Controlador
         lista.listaComicTal("Superwoman").imprimirNormal();
          
        StdOut.println("\n\"  Liga de la Justicia\" contiene a ");
-        lista.listaAfiliacioTal("Liga de la justicia").imprimirNormal();
+        lista.listaAfiliacionTal("Liga de la justicia").imprimirNormal();
        
        StdOut.println("\n\" Demonio \" raza de  ");
         lista.listaRazaTal("demonio").imprimirNormal();
-         
+       
+       StdOut.println("\n\" Demon \" alias de  ");
+        lista.listaAliasTal("demon").imprimirNormal();
+       
+       StdOut.println("\n\" Kristin Wells \" nombre real de  ");
+        lista.listaNombreRealTal("kristin wells").imprimirNormal();
+       
         
        /**Insertamos un nuevo superheroe*/
        
