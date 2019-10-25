@@ -89,8 +89,7 @@ public class SuperHeroe implements Serializable
    public boolean equals(Object obj){
        SuperHeroe x = (SuperHeroe) obj;
        if(getAlias().equals(x.getAlias()) && getPoder().equals(x.getPoder()) 
-          && getSexo()== x.getSexo() && getDebilidad().equals(x.getDebilidad())
-          && getAñoAparicion() == x.getAñoAparicion())
+          && getSexo() == x.getSexo() && getDebilidad().equals(x.getDebilidad()))
         return true;
        return false;
     } 

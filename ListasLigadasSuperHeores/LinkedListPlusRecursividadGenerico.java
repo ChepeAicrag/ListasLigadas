@@ -14,40 +14,70 @@ public class LinkedListPlusRecursividadGenerico<E> {
     public E getInfo(Nodo temp){ 
         if(temp != null)
             return temp.info;
-        if(temp == getRaiz())    
-            return  (E) "Nadie, eres el primero!!";
-        return (E) "Nadie, eres el ultimo!!!";
+        return null;
     }
     
     public Nodo getRaiz(){
         return raiz;
     }
     
+    /**Si solo queremos el nodo que está antes*/
     public Nodo AntesDe(E x){
-        //Arreglar esto 
-        if(!Buscar(x)){
-            Nodo temp = new Nodo();
-            temp.info = (E)"No está en la lista";
-            return temp;
-        } 
-        for(Nodo i = raiz; i.sig != null; i = i.sig)
-            if(i.sig.info.equals(x))
-                return i;
-        return null; 
+        Nodo temp = null;
+        if(x == null) //Si mandan un null devuelve al ultimo porque el apunta a null
+            return BuscarUltimo();
+        if(Buscar(x)) //Comprobar de lo que vamos a buscar existe
+            if(raiz.info.equals(x)) //Caso especial de buscar antes de raiz
+                return raiz;
+             else 
+                for(Nodo i = raiz; i.sig != null; i = i.sig)
+                    if(i.sig.info.equals(x))
+                        temp = i;
+        return temp; 
     }
     
+    /** Si queremos la informacion de lo que está antes*/
+    public E AntesDeInfo(E x){
+        if(AntesDe(x) == null) //Si existe o no en la lista
+            return (E) "No está en la lista";
+        if(AntesDe(x) == raiz) //Debemos comprobar que si es raiz, antes no hay nadie    
+            return  (E) "Nadie, eres el primero!!";
+        return getInfo(AntesDe(x));    
+    }
+    
+    /** Si solo queremos el nodo que está despues*/
     public Nodo DespuesDe(E x){
+        Nodo temp = null;
+        if(Buscar(x))
          for(Nodo i = raiz; i != null; i = i.sig)
             if(i.info.equals(x))
-                return i.sig;
-        return null; 
+                temp = i.sig;
+        return temp; 
+    }
+    
+    /** Si queremos la informacion del nodo que está despues */
+    public E DespuesDeInfo(E x){
+        if(DespuesDe(x) == null && Buscar(x)) //Busco de que existe en la lista y de que despues de él solo hay null
+            return (E) "Nadie eres el ultimo!!"; 
+        if(DespuesDe(x) == null && !Buscar(x)) //Si no se encuentra y es null, entonces no está en la lista
+        return (E) "No está en la lista";
+        return getInfo(DespuesDe(x));   
     }
     
     public boolean Buscar(E x){
+       if(x != null) // Si es diferente de null se busca, de lo contrario es false
          for(Nodo i = raiz; i != null; i = i.sig)
             if(i.info.equals(x))
                 return true;
         return false; 
+    }
+    
+    public Nodo BuscarUltimo(){
+        Nodo temp = null;
+        for(Nodo i = raiz; i != null; i = i.sig)
+            if(i.sig == null)
+            temp = i;
+        return temp;    
     }
     
     public void Eliminar(E x){
