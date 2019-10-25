@@ -14,7 +14,7 @@ public class Controlador
          SuperHeroe demon       = new SuperHeroe("Demon","Atributos físicos y poderes sensoriales sobrehumanos,Capacidad de regeneración, Poderes mágicos,Precognición,Telepatía,Inmortalidad,Puede lanzar llamas de fuego místico,Vuelo",
         'H',"Convive en un mismo cuerpo","Jack Kirby","Jason Blood","Gotham City","The Demon","Liga de la Justicia Oscura","Demonio",1972); 
          
-         SuperHeroe superwoman2  = new SuperHeroe("Superwoman2","Transformar energia,Absorción de Energía Solar,Super Fuerza,Invulnerabilidad,Super Velocidad,Vuelo,Visión de Calor,Visión Aumentada",
+         SuperHeroe superwoman2  = new SuperHeroe("Superwoman2","Capacidad de regeneración,Transformar energia,Absorción de Energía Solar,Super Fuerza,Invulnerabilidad,Super Velocidad,Vuelo,Visión de Calor,Visión Aumentada",
         'M',"","Phil Jimenez","Lois Lane,Luma Lynai,Diana (Tierra-3),Kristin Wells,Dana Dearden,Lucy Lane,Lana Lang","Tierra-11",
         "Action Comics,Justice League of America,Miracle Monday,Adventures of Superman,Supergirl,Superwoman","Liga de la Justicia","Superhumana",1943,1962,1964,2009,2016);
         
@@ -73,5 +73,10 @@ public class Controlador
        StdOut.println("\n\" Kristin Wells \" nombre real de  ");
         lista.listaNombreRealTal("kristin wells").imprimirNormal();
 
+       StdOut.println("\n\" Son hombre y tiene el poder Capacidad de regeneración\"");
+        lista.listaSexoYPoderTal('H',"Capacidad de regeneración").imprimirNormal();
+        
+       StdOut.println("\n\" Son mujer y tiene el poder Capacidad de regeneración\"");
+        lista.listaSexoYPoderTal('M',"Capacidad de regeneración").imprimirNormal(); 
    }
 }

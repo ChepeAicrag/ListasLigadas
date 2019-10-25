@@ -40,7 +40,7 @@ public class LinkedListPlusRecursividadGenerico<E> {
     public E AntesDeInfo(E x){
         if(AntesDe(x) == null) //Si existe o no en la lista
             return (E) "No está en la lista";
-        if(AntesDe(x) == raiz) //Debemos comprobar que si es raiz, antes no hay nadie    
+        if( x == raiz.info) //Debemos comprobar que si es raiz, antes no hay nadie, como es un apuntador, se evalua así, no requiere de casting    
             return  (E) "Nadie, eres el primero!!";
         return getInfo(AntesDe(x));    
     }
@@ -49,16 +49,16 @@ public class LinkedListPlusRecursividadGenerico<E> {
     public Nodo DespuesDe(E x){
         Nodo temp = null;
         if(Buscar(x))
-         for(Nodo i = raiz; i != null; i = i.sig)
-            if(i.info.equals(x))
-                temp = i.sig;
+              for(Nodo i = raiz; i != null; i = i.sig)
+                  if(i.info.equals(x))
+                     temp = i.sig;
         return temp; 
     }
     
     /** Si queremos la informacion del nodo que está despues */
     public E DespuesDeInfo(E x){
-        if(DespuesDe(x) == null && Buscar(x)) //Busco de que existe en la lista y de que despues de él solo hay null
-            return (E) "Nadie eres el ultimo!!"; 
+        if(((SuperHeroe)BuscarUltimo().info).equals(x)) //Busco de que existe en la lista y de que despues de él solo hay null
+            return (E) "Nadie eres el ultimo!!";        // Como no hay referencia, se tiene que comparar como objeto, por ello el casting
         if(DespuesDe(x) == null && !Buscar(x)) //Si no se encuentra y es null, entonces no está en la lista
         return (E) "No está en la lista";
         return getInfo(DespuesDe(x));   
@@ -294,4 +294,9 @@ public class LinkedListPlusRecursividadGenerico<E> {
         return lista;
     }
     
+    /** Metodo para buscar por sexo y poder tal*/
+    public LinkedListPlusRecursividadGenerico<E> listaSexoYPoderTal(char sexo, String poder){
+        LinkedListPlusRecursividadGenerico<E> lista = listaSexoTal(sexo); //Te entrega una lista de sexo tal 
+        return lista.listaPoderTal(poder); //Te regresa quienes tienen el poder, sobre esa misma lista
+    }
 }
