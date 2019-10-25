@@ -7,7 +7,10 @@ public class Test01
         /**Mostrar la lista*/
         lista.imprimirNormal();
         
+        
         /**Buscando quien está antes de Batman*/
+        
+        /*
         SuperHeroe batman = new SuperHeroe("Batman", "ser rico",'H');
         StdOut.println("\" Batman \" está despues de \n " 
                         + lista.getInfo(lista.AntesDe(batman)));
@@ -34,7 +37,7 @@ public class Test01
         
         StdOut.println("Buscando a los superheroes \" Mujer \" \n ");
         lista.listaSexoTal('M').imprimirNormal();
-        
+        */
     }
     
     

@@ -31,7 +31,8 @@ public class Archivo{
         File archivoSalida = new File(nom+".txt");     
         flujoArchivoEntrada = new FileInputStream(archivoSalida);
         flujoObjetoEntrada = new ObjectInputStream(flujoArchivoEntrada);
-        Object per = flujoObjetoEntrada.readObject();           
+        Object per = flujoObjetoEntrada.readObject();   
+        StdOut.println("\n******** MOSTRANDO ARCHIVO *******");
         while(per != null){
              System.out.print(((SuperHeroe)per).toString());
              per = flujoObjetoEntrada.readObject();

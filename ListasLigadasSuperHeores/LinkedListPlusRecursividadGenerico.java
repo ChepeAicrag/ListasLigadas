@@ -1,4 +1,5 @@
 import java.util.*;
+import java.text.Normalizer;
 public class LinkedListPlusRecursividadGenerico<E> {
     
     private class Nodo {
@@ -11,7 +12,9 @@ public class LinkedListPlusRecursividadGenerico<E> {
     public E getInfo(Nodo temp){ 
         if(temp != null)
             return temp.info;
-        return  null;
+        if(temp == getRaiz())    
+            return  (E) "Nadie, eres el primero!!";
+        return (E) "Nadie, eres el ultimo!!!";
     }
     
     public Nodo getRaiz(){
@@ -42,7 +45,7 @@ public class LinkedListPlusRecursividadGenerico<E> {
     public void Eliminar(E x){
         Nodo temp = AntesDe(x);
         if(raiz.info.equals(x))
-           raiz = raiz.sig;
+           raiz = raiz.sig; 
         if(temp!=null)
         temp.sig = temp.sig.sig;
         
@@ -87,6 +90,8 @@ public class LinkedListPlusRecursividadGenerico<E> {
         return vecTemp;
     }
     
+    /**Llenar una lista dado un vector*/
+    
     public LinkedListPlusRecursividadGenerico<E> llenarListaVector(Vector <E> vec){
         LinkedListPlusRecursividadGenerico <E> lista = new LinkedListPlusRecursividadGenerico();
         for(int i = 0; i < vec.size(); i++)
@@ -94,17 +99,89 @@ public class LinkedListPlusRecursividadGenerico<E> {
         return lista;    
     }
     
-    /**Estos metodos no estoy seguro de que vayan aqui*/
+    /**
+     * 
+     * Estos metodos no estoy seguro de que vayan aqui
+     *  
+       */
     
-    //Retorna una lista de los que tienen el mismo poder
+    /** Metodo termiando */
+    
     public LinkedListPlusRecursividadGenerico<E> listaPoderTal(String poder){
         LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.sig){
-                if(((SuperHeroe)(i.info)).getPoder().equals(poder))
-                    lista.insertarPrimero(((E)(i.info)));
+                String [] temp = ((SuperHeroe)(i.info)).getPoder().split(","); 
+                for(int j = 0; j < temp.length; j++)
+                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(poder)))
+                        lista.insertarPrimero(((E)(i.info)));
             }
         return lista;
     }
+    
+    public LinkedListPlusRecursividadGenerico<E> listaAutorTal(String autor){
+        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
+            for(Nodo i = raiz; i != null; i = i.sig){
+                String [] temp = ((SuperHeroe)(i.info)).getAutor().split(","); 
+                for(int j = 0; j < temp.length; j++)
+                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(autor)))
+                        lista.insertarPrimero(((E)(i.info)));
+            }
+        return lista;
+    }
+    
+    public LinkedListPlusRecursividadGenerico<E> listaOrigenTal(String origen){
+        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
+            for(Nodo i = raiz; i != null; i = i.sig){
+                String [] temp = ((SuperHeroe)(i.info)).getOrigen().split(","); 
+                for(int j = 0; j < temp.length; j++)
+                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(origen)))
+                        lista.insertarPrimero(((E)(i.info)));
+            }
+        return lista;
+    }
+    
+    public LinkedListPlusRecursividadGenerico<E> listaComicTal(String comic){
+        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
+            for(Nodo i = raiz; i != null; i = i.sig){
+                String [] temp = ((SuperHeroe)(i.info)).getComic().split(","); 
+                for(int j = 0; j < temp.length; j++)
+                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(comic)))
+                        lista.insertarPrimero(((E)(i.info)));
+            }
+        return lista;
+    }
+    
+    public LinkedListPlusRecursividadGenerico<E> listaAfiliacioTal(String afiliacion){
+        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
+            for(Nodo i = raiz; i != null; i = i.sig){
+                String [] temp = ((SuperHeroe)(i.info)).getAfiliacionActual().split(","); 
+                for(int j = 0; j < temp.length; j++)
+                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(afiliacion)))
+                        lista.insertarPrimero(((E)(i.info)));
+            }
+        return lista;
+    }
+    
+    public LinkedListPlusRecursividadGenerico<E> listaRazaTal(String raza){
+        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
+            for(Nodo i = raiz; i != null; i = i.sig){
+                String [] temp = ((SuperHeroe)(i.info)).getRaza().split(","); 
+                for(int j = 0; j < temp.length; j++)
+                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(raza)))
+                        lista.insertarPrimero(((E)(i.info)));
+            }
+        return lista;
+    }
+    
+    
+    //Metodo para qutar las tildes de un string, para hacer mas eficiente la busqueda
+    private static String cleanString(String texto) {
+        texto = Normalizer.normalize(texto, Normalizer.Form.NFD);
+        texto = texto.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
+        return texto;
+    }
+    
+    /**Metodo terminado*/
     
     public LinkedListPlusRecursividadGenerico<E> listaSexoTal(char sexo){
         LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
@@ -115,15 +192,21 @@ public class LinkedListPlusRecursividadGenerico<E> {
         return lista;
     }
     
+    /**Metodo terminado**/
+    
     public LinkedListPlusRecursividadGenerico<E> listaAñoApaircionTal(int añoAparicion){
         LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.sig){
-                if(((SuperHeroe)(i.info)).getAñoAparicion() == añoAparicion)
-                    lista.insertarPrimero(((E)(i.info)));
+                for(int j = 0; j < ((SuperHeroe)(i.info)).getAñoAparicion().length; j++)
+                    if(((SuperHeroe)(i.info)).getAñoAparicion()[j] == añoAparicion)
+                         lista.insertarPrimero(((E)(i.info)));
             }
         return lista;
     }
     
+    
+    
+    /**Metodo pendiente (Tal vez no incluirlo)*/
     public LinkedListPlusRecursividadGenerico<E> listaDebilidadTal(String debilidad){
         LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.sig){
