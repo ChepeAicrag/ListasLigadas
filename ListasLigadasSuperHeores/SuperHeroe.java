@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.*;
 public class SuperHeroe implements Serializable
 {
-   private String alias; 
-   private String nombreReal;
+   private String alias; //Metodo realizado
+   private String nombreReal; //Metodo realiazdo
    private char sexo; //Metodo realizado
    private String poder; //Metodo realizado
    private int[] añoAparicion; //Metodo realizado
@@ -16,7 +16,7 @@ public class SuperHeroe implements Serializable
    
    public SuperHeroe(String alias, String poder, char sexo, String debilidad, String autor, 
                      String nombreReal, String origen, String comic, String afiliacionActual, String raza, int... añoAparicion){
-       this.alias           = alias;
+       this.alias            = alias;
        this.poder            = poder;
        this.sexo             = sexo;
        this.debilidad        = debilidad;

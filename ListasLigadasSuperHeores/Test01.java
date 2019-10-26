@@ -1,44 +1,45 @@
 
+/**
+ * Test de buscar, antes de , despues de 
+ */
 public class Test01
 {
-    public static void main(){
-        LinkedListPlusRecursividadGenerico <SuperHeroe> lista = new LinkedListPlusRecursividadGenerico() ;
-        CreacionSuperHeroes.llenarSuperHeroes(lista);
-        /**Mostrar la lista*/
-        lista.imprimirNormal();
+  public static void main()throws Exception{
+       LinkedListPlusRecursividadGenerico <SuperHeroe >lista = new LinkedListPlusRecursividadGenerico();
+       CreacionSuperHeroes.llenarSuperHeroes(lista); //A la lista de parametro le agregamos todos los superheroes
+       
+       /**Muestra el archivo*/
+       Archivo.LeerArchivo("SuperHeroesContenido"); // Mostramos el archivo
+       
+         /**Test de los metodos */
+        
+         SuperHeroe demon       = new SuperHeroe("Demon","Atributos físicos y poderes sensoriales sobrehumanos,Capacidad de regeneración, Poderes mágicos,Precognición,Telepatía,Inmortalidad,Puede lanzar llamas de fuego místico,Vuelo",
+        'H',"Convive en un mismo cuerpo","Jack Kirby","Jason Blood","Gotham City","The Demon","Liga de la Justicia Oscura","Demonio",1972); 
+         
+         SuperHeroe superwoman2  = new SuperHeroe("Superwoman2","Capacidad de regeneración,Transformar energia,Absorción de Energía Solar,Super Fuerza,Invulnerabilidad,Super Velocidad,Vuelo,Visión de Calor,Visión Aumentada",
+        'M',"","Phil Jimenez","Lois Lane,Luma Lynai,Diana (Tierra-3),Kristin Wells,Dana Dearden,Lucy Lane,Lana Lang","Tierra-11",
+        "Action Comics,Justice League of America,Miracle Monday,Adventures of Superman,Supergirl,Superwoman","Liga de la Justicia","Superhumana",1943,1962,1964,2009,2016);
         
         
-        /**Buscando quien está antes de Batman*/
-        
-        /*
-        SuperHeroe batman = new SuperHeroe("Batman", "ser rico",'H');
-        StdOut.println("\" Batman \" está despues de \n " 
-                        + lista.getInfo(lista.AntesDe(batman)));
-        StdOut.println("\" Batman \" está antes de  \n " 
-                        + lista.getInfo(lista.DespuesDe(batman)));
-        
-        SuperHeroe superman       = new SuperHeroe("Spiderman","super fuerza, velocidad",'H');
-        
-        StdOut.println("\" Superman \" está despues de \n " 
-                        + lista.getInfo(lista.AntesDe(superman)));
-        StdOut.println("\" Superman \" está antes de  \n " 
-                        + lista.getInfo(lista.DespuesDe(superman)));
-        
-        SuperHeroe atomo = new SuperHeroe("Atomo","reducir su cuerpo",'H');
-        
-        StdOut.println("Buscando a \" Atomo \" \n " 
-                        + lista.Buscar(atomo));
-        
-        StdOut.println("Buscando a superhores con poder de \" reducir su cuerpo \" \n "); 
-        lista.listaPoderTal("reducir su cuerpo").imprimirNormal();
-        
-        StdOut.println("Buscando a los superheroes \" Hombre \" \n ");
-        lista.listaSexoTal('H').imprimirNormal();
-        
-        StdOut.println("Buscando a los superheroes \" Mujer \" \n ");
-        lista.listaSexoTal('M').imprimirNormal();
-        */
-    }
-    
-    
+       StdOut.println("\n\" Demon \" está despues de  " 
+                        + lista.AntesDeInfo(demon));
+       
+       StdOut.println("\n\" Superwoman2 \" está despues de  " 
+                        + lista.AntesDeInfo(superwoman2));
+                        
+       StdOut.println("\n\" Demon \" está antes de  " 
+                        + lista.DespuesDeInfo(demon));
+       
+       StdOut.println("\n\" Primero \" es  " 
+                        + lista.getInfo(lista.getRaiz()));
+                        
+       StdOut.println("\n\" Ultimo \" es  " 
+                        + lista.getInfo(lista.BuscarUltimo()));
+                        
+       StdOut.println("\n\" Demon \" aparece en la lista  " 
+                        + lista.Buscar(demon));
+                        
+       StdOut.println("\n\" Null \" aparece en la lista  " 
+                        + lista.Buscar(null));
+     }
 }

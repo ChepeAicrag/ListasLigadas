@@ -8,7 +8,12 @@ public class LinkedListPlusRecursividadGenerico<E> {
         E info;
         Nodo sig;
     }
-    
+    /*
+    public LinkedListPlusRecursividadGenerico(){
+       Archivo.LlenarArchivo(lista,"SuperHeroesContenido"); // Volvemeos a rellenar el archivo (Actualizar)
+       Archivo.LeerArchivo("SuperHeroesContenido"); // Mostramos el archivo
+       
+    }*/
     private Nodo raiz;
     
     public E getInfo(Nodo temp){ 
@@ -112,11 +117,17 @@ public class LinkedListPlusRecursividadGenerico<E> {
     }
     
     public void imprimirInversa () {
+        if(raiz != null)
         StdOut.println(imprimirInversa(raiz));
+        else
+        StdOut.println("\t***** Lista Vacia *****");
     }
     
     public void imprimirNormal(){
+        if(raiz != null)
         StdOut.println(imprimirNormal(raiz));
+        else
+        StdOut.println("\t***** Lista Vacia *****");
     }
     
     /**Obtener una lista en forma de vector*/
@@ -284,7 +295,7 @@ public class LinkedListPlusRecursividadGenerico<E> {
     
     /** Metodo termiando para buscar por año / años de aparicion*/
     
-    public LinkedListPlusRecursividadGenerico<E> listaAñoApaircionTal(int añoAparicion){
+    public LinkedListPlusRecursividadGenerico<E> listaAñoAparicionTal(int añoAparicion){
         LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.sig){
                 for(int j = 0; j < ((SuperHeroe)(i.info)).getAñoAparicion().length; j++)
@@ -294,9 +305,178 @@ public class LinkedListPlusRecursividadGenerico<E> {
         return lista;
     }
     
-    /** Metodo para buscar por sexo y poder tal*/
+    
+    /**
+     * Metodos combiandos que generan lista, apartir de listas (Filtrado)
+     * 
+     */
+    
+    
+    /** Metodo terminado para buscar por sexo y poder tal*/
     public LinkedListPlusRecursividadGenerico<E> listaSexoYPoderTal(char sexo, String poder){
         LinkedListPlusRecursividadGenerico<E> lista = listaSexoTal(sexo); //Te entrega una lista de sexo tal 
         return lista.listaPoderTal(poder); //Te regresa quienes tienen el poder, sobre esa misma lista
+    }
+    
+    /** Metodo terminado para buscar por sexo y año tal*/
+    public LinkedListPlusRecursividadGenerico<E> listaSexoYAñoAparicionTal(char sexo, int añoAparicion){
+        LinkedListPlusRecursividadGenerico<E> lista = listaSexoTal(sexo);
+        return lista.listaAñoAparicionTal(añoAparicion);
+    }
+    
+    /** Metodo terminado para buscar por sexo y autor tal*/
+    public LinkedListPlusRecursividadGenerico<E> listaSexoYAutorTal(char sexo, String autor){
+         LinkedListPlusRecursividadGenerico<E> lista = listaSexoTal(sexo);
+         return lista.listaAutorTal(autor);
+    }
+    
+    /** Metodo terminado para buscar por sexo y origen tal*/
+    public LinkedListPlusRecursividadGenerico<E> listaSexoYOrigenTal(char sexo, String origen){
+         LinkedListPlusRecursividadGenerico<E> lista = listaSexoTal(sexo);
+         return lista.listaOrigenTal(origen);
+    }
+    
+    /** Metodo terminado para buscar por sexo y comic tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaSexoYComicTal(char sexo, String comic){
+         LinkedListPlusRecursividadGenerico<E> lista = listaSexoTal(sexo);
+         return lista.listaComicTal(comic);
+    }
+    
+    /** Metodo terminado para buscar por sexo y afiliacion tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaSexoYAfiliacionTal(char sexo, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = listaSexoTal(sexo);
+         return lista.listaAfiliacionTal(afiliacion);
+    }
+    
+    /** Metodo terminado para buscar por sexo y raza tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaSexoYRazaTal(char sexo, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = listaSexoTal(sexo);
+         return lista.listaRazaTal(raza);
+    }
+    
+        /** Metodo terminado para buscar por poder y año tal*/
+    public LinkedListPlusRecursividadGenerico<E> listaPoderYAñoAparicionTal(String poder, int añoAparicion){
+        LinkedListPlusRecursividadGenerico<E> lista = listaPoderTal(poder);
+        return lista.listaAñoAparicionTal(añoAparicion);
+    }
+    
+    /** Metodo terminado para buscar por poder y autor tal*/
+    public LinkedListPlusRecursividadGenerico<E> listaSexoYAutorTal(String poder, String autor){
+         LinkedListPlusRecursividadGenerico<E> lista = listaPoderTal(poder);
+         return lista.listaAutorTal(autor);
+    }
+    
+    /** Metodo terminado para buscar por poder y origen tal*/
+    public LinkedListPlusRecursividadGenerico<E> listaPoderYOrigenTal(String poder, String origen){
+         LinkedListPlusRecursividadGenerico<E> lista = listaPoderTal(poder);
+         return lista.listaOrigenTal(origen);
+    }
+    
+    /** Metodo terminado para buscar por poder y comic tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaPoderYComicTal(String poder, String comic){
+         LinkedListPlusRecursividadGenerico<E> lista = listaPoderTal(poder);
+         return lista.listaComicTal(comic);
+    }
+    
+    /** Metodo terminado para buscar por poder y afiliacion tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaPoderYAfiliacionTal(String poder, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = listaPoderTal(poder);
+         return lista.listaAfiliacionTal(afiliacion);
+    }
+    
+    /** Metodo terminado para buscar por poder y raza tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaPoderYRazaTal(String poder, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = listaPoderTal(poder);
+         return lista.listaRazaTal(raza);
+    }
+    
+    /** Metodo terminado para buscar por año y autor tal*/
+    public LinkedListPlusRecursividadGenerico<E> listaAñoAparicionYAutorTal(int añoAparicion, String autor){
+         LinkedListPlusRecursividadGenerico<E> lista = listaAñoAparicionTal(añoAparicion);
+         return lista.listaAutorTal(autor);
+    }
+    
+    /** Metodo terminado para buscar por año y origen tal*/
+    public LinkedListPlusRecursividadGenerico<E> listaAñoAparicionYOrigenTal(int añoAparicion, String origen){
+         LinkedListPlusRecursividadGenerico<E> lista = listaAñoAparicionTal(añoAparicion);
+         return lista.listaOrigenTal(origen);
+    }
+    
+    /** Metodo terminado para buscar por año y comic tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaAñoAparicionYComicTal(int añoAparicion, String comic){
+         LinkedListPlusRecursividadGenerico<E> lista = listaAñoAparicionTal(añoAparicion);
+         return lista.listaComicTal(comic);
+    }
+    
+    /** Metodo terminado para buscar por año y afiliacion tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaAñoAparicionYAfiliacionTal(int añoAparicion, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = listaAñoAparicionTal(añoAparicion);
+         return lista.listaAfiliacionTal(afiliacion);
+    }
+    
+    /** Metodo terminado para buscar por año y raza tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaAñoAparicionYRazaTal(int añoAparicion, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = listaAñoAparicionTal(añoAparicion);
+         return lista.listaRazaTal(raza);
+    }
+    
+    /** Metodo terminado para buscar por autor y origen tal*/
+    public LinkedListPlusRecursividadGenerico<E> listaAutorYOrigenTal(String autor, String origen){
+         LinkedListPlusRecursividadGenerico<E> lista = listaAutorTal(autor);
+         return lista.listaOrigenTal(origen);
+    }
+    
+    /** Metodo terminado para buscar por autor y comic tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaAutorYComicTal(String autor, String comic){
+         LinkedListPlusRecursividadGenerico<E> lista = listaAutorTal(autor);
+         return lista.listaComicTal(comic);
+    }
+    
+    /** Metodo terminado para buscar por autor y afiliacion tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaAutorYAfiliacionTal(String autor, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = listaAutorTal(autor);
+         return lista.listaAfiliacionTal(afiliacion);
+    }
+    
+    /** Metodo terminado para buscar por autor y raza tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaAutorYRazaTal(String autor, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = listaAutorTal(autor);
+         return lista.listaRazaTal(raza);
+    }
+    
+    /** Metodo terminado para buscar por origen y comic tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaOrigenYComicTal(String origen, String comic){
+         LinkedListPlusRecursividadGenerico<E> lista = listaOrigenTal(origen);
+         return lista.listaComicTal(comic);
+    }
+    
+    /** Metodo terminado para buscar por origen y afiliacion tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaOrigenYAfiliacionTal(String origen, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = listaOrigenTal(origen);
+         return lista.listaAfiliacionTal(afiliacion);
+    }
+    
+    /** Metodo terminado para buscar por origen y raza tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaOrigenYRazaTal(String origen, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = listaOrigenTal(origen);
+         return lista.listaRazaTal(raza);
+    }
+    
+    /** Metodo terminado para buscar por comic y afiliacion tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaComicYAfiliacionTal(String comic, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = listaComicTal(comic);
+         return lista.listaAfiliacionTal(afiliacion);
+    }
+    
+    /** Metodo terminado para buscar por comic y raza tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaComicYRazaTal(String comic, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = listaComicTal(comic);
+         return lista.listaRazaTal(raza);
+    }
+    
+    /** Metodo terminado para buscar por afiliacion y raza tal*/
+    public  LinkedListPlusRecursividadGenerico<E> listaAfiliacionYRazaTal(String afiliacion, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = listaAfiliacionTal(afiliacion);
+         return lista.listaRazaTal(raza);
     }
 }
