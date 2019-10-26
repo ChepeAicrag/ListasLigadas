@@ -361,7 +361,7 @@ public class LinkedListPlusRecursividadGenerico<E> {
     }
     
     /** Metodo terminado para buscar por poder y autor tal*/
-    public LinkedListPlusRecursividadGenerico<E> listaSexoYAutorTal(String poder, String autor){
+    public LinkedListPlusRecursividadGenerico<E> listaPoderYAutorTal(String poder, String autor){
          LinkedListPlusRecursividadGenerico<E> lista = listaPoderTal(poder);
          return lista.listaAutorTal(autor);
     }
