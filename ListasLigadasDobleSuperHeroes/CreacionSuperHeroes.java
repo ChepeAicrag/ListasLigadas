@@ -6,7 +6,7 @@
 import java.util.*;
 public class CreacionSuperHeroes
 {
-   public static void  llenarSuperHeroes(LinkedListPlusRecursividadGenerico superheroes){
+   public static void  llenarSuperHeroes(ListaDoblementeEnlazada superheroes2){
         //LinkedListPlusRecursividadGenerico <SuperHeroe> superheroes = new LinkedListPlusRecursividadGenerico();
         /*
         SuperHeroe superman       = new SuperHeroe("Spiderman","super fuerza, velocidad",'H');
@@ -30,7 +30,6 @@ public class CreacionSuperHeroes
        /**SuperHeroe(String alias, String poder, char sexo, int añoAparicion, String debilidad, String autor, 
                      String nombreReal, String origen, String comic, String afiliacionActual, String raza){
           */
-       ListaDoblementeEnlazada superheroes2 = new ListaDoblementeEnlazada(); 
         SuperHeroe demon       = new SuperHeroe("Demon","Atributos físicos y poderes sensoriales sobrehumanos,Capacidad de regeneración, Poderes mágicos,Precognición,Telepatía,Inmortalidad,Puede lanzar llamas de fuego místico,Vuelo",
         'H',"Convive en un mismo cuerpo","Jack Kirby","Jason Blood","Gotham City","The Demon","Liga de la Justicia Oscura","Demonio",1972); 
         
@@ -46,16 +45,11 @@ public class CreacionSuperHeroes
         'M',"","Phil Jimenez","Lois Lane,Luma Lynai,Diana (Tierra-3),Kristin Wells,Dana Dearden,Lucy Lane,Lana Lang","Tierra-11",
         "Action Comics,Justice League of America,Miracle Monday,Adventures of Superman,Supergirl,Superwoman","Liga de la Justicia","Superhumana",1943,1962,1964,2009,2016);
         
-        
-        superheroes.insertarPrimero(demon);
-        superheroes.insertarPrimero(superwoman);
-        superheroes.insertarPrimero(superwoman2);
-        superheroes.insertarPrimero(demon2);
-        
         superheroes2.insertarInicio(demon);
         superheroes2.insertarInicio(superwoman);
         superheroes2.insertarInicio(superwoman2);
         superheroes2.insertarInicio(demon2);
+        
         /**Agregar a los 50 superheroes faltantes*/
         /*
         SuperHeroe deadman     = new SuperHeroe("Deadman","Invisibilidad,Vuelo,Intangibilidad,Puede poseer a cualquier ser vivo y controlarlo completamente",

@@ -1,24 +1,18 @@
 import java.util.*;
 import java.text.Normalizer;
 
-/**Falta validad si está o no, para que no siga la busqueda*/
-public class LinkedListPlusRecursividadGenerico<E> {
+public class LinkedListPlusRecursividadGenerico<E>{
     
     private class Nodo {
         E info;
         Nodo sig;
     }
-    /*
-    public LinkedListPlusRecursividadGenerico(){
-       Archivo.LlenarArchivo(lista,"SuperHeroesContenido"); // Volvemeos a rellenar el archivo (Actualizar)
-       Archivo.LeerArchivo("SuperHeroesContenido"); // Mostramos el archivo
-       
-    }*/
+    
     private Nodo raiz;
     
     public E getInfo(Nodo temp){ 
         if(temp != null)
-            return temp.info;
+            return (E)temp.info;
         return null;
     }
     
@@ -136,7 +130,7 @@ public class LinkedListPlusRecursividadGenerico<E> {
         Vector<E> vecTemp = new Vector <E>();
         Nodo temp = raiz;
         while(temp != null){
-            vecTemp.add(temp.info);
+            vecTemp.add((E)temp.info);
             temp = temp.sig;
         }
         return vecTemp;
@@ -145,7 +139,7 @@ public class LinkedListPlusRecursividadGenerico<E> {
     /**Llenar una lista dado un vector*/
     
     public LinkedListPlusRecursividadGenerico<E> llenarListaVector(Vector <E> vec){
-        LinkedListPlusRecursividadGenerico <E> lista = new LinkedListPlusRecursividadGenerico();
+        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
         for(int i = 0; i < vec.size(); i++)
             lista.insertarPrimero(vec.elementAt(i));
         return lista;    

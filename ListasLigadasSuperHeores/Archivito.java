@@ -1,8 +1,8 @@
-import java.util.*;
+
 import java.io.*;
-public class Archivo{
-  
-  public static void LlenarArchivo(LinkedListPlusRecursividadGenerico lista,String nom) throws Exception{
+public class Archivito
+{
+    public static void LlenarArchivo(ListaDoblementeEnlazada lista,String nom) throws Exception{
       Object superheroe=null; 
       File archivoSalida;
       FileOutputStream flujoArchivoSalida = null;
@@ -12,8 +12,8 @@ public class Archivo{
             flujoArchivoSalida = new FileOutputStream(archivoSalida);
             flujoObjetoSalida = new ObjectOutputStream(flujoArchivoSalida);
            // if(lista instanceof LinkedListPlusRecursividadGenerico ){
-            for(int i=0;i<((LinkedListPlusRecursividadGenerico)lista).formaVector().size();i++){
-                superheroe=((LinkedListPlusRecursividadGenerico)lista).formaVector().elementAt(i);  
+            for(int i=0;i<lista.formaVector().size();i++){
+                superheroe = lista.formaVector().elementAt(i);  
                 flujoObjetoSalida.writeObject(superheroe);
             }//}
       }catch(IOException error){
@@ -45,22 +45,4 @@ public class Archivo{
             flujoObjetoEntrada.close();
     }    
   }
-  /*
-  public static void LlenarArchivo(LinkedListPlusRecursividadGenerico lista,String nom) throws Exception{
-    Object superheroe=null; 
-        try{
-            File archivoSalida;
-            FileOutputStream flujoArchivoSalida;
-            ObjectOutputStream flujoObjetoSalida;    
-            archivoSalida = new File(nom+".txt");
-            flujoArchivoSalida = new FileOutputStream(archivoSalida);
-            flujoObjetoSalida = new ObjectOutputStream(flujoArchivoSalida);
-            LinkedListPlusRecursividadGenerico listaTemp =  
-            while( listaTemp != null){
-                flujoObjetoSalida.writeObject(lista.getInfo(listaTemp));
-            }
-            flujoObjetoSalida.close();
-            flujoArchivoSalida.close();
-      }catch(IOException error){}
-    }*/
 }
