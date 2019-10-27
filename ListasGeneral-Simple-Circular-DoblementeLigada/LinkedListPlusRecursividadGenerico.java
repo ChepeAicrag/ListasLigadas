@@ -1,6 +1,7 @@
 import java.util.*;
 import java.text.Normalizer;
 import java.io.*;
+
 public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     private Nodo raiz;
@@ -42,7 +43,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         return false;    
     }
     
-    /**Si solo queremos el nodo que está antes*/
+    /** Si solo queremos el nodo que está antes*/
     public Nodo AntesDe(E x){
         Nodo temp = null;
         if(x == null) //Si mandan un null devuelve al ultimo porque el apunta a null
@@ -172,7 +173,6 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
 
    /** Metodo termiando para buscar por alias */
-    
     public LinkedListPlusRecursividadGenerico<E> ListaAliasTal(String alias){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -185,7 +185,6 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por nombre real */
-    
     public LinkedListPlusRecursividadGenerico<E> ListaNombreRealTal(String nombreReal){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -198,7 +197,6 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por poder */
-    
     public LinkedListPlusRecursividadGenerico<E> ListaPoderTal(String poder){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -211,7 +209,6 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por autor*/
-    
     public LinkedListPlusRecursividadGenerico<E> ListaAutorTal(String autor){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -224,7 +221,6 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por origen*/
-    
     public LinkedListPlusRecursividadGenerico<E> ListaOrigenTal(String origen){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -237,7 +233,6 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por comic*/
-    
     public LinkedListPlusRecursividadGenerico<E> ListaComicTal(String comic){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -250,7 +245,6 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por afiliacion*/
-    
     public LinkedListPlusRecursividadGenerico<E> ListaAfiliacionTal(String afiliacion){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -262,8 +256,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         return Lista;
     }
     
-    /** Metodo termiando para buscar por raza*/
-    
+    /** Metodo termiando para buscar por raza */
     public LinkedListPlusRecursividadGenerico<E> ListaRazaTal(String raza){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -275,8 +268,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         return Lista;
     }
     
-    /**Metodo para qutar las tildes de un string, para hacer mas eficiente la busqueda*/
-    
+    /** Metodo para qutar las tildes de un string, para hacer mas eficiente la busqueda */
     private static String cleanString(String info) {
         info = Normalizer.normalize(info, Normalizer.Form.NFD);
         info = info.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
@@ -284,7 +276,6 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por sexo */
-    
     public LinkedListPlusRecursividadGenerico<E> ListaSexoTal(char sexo){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -295,7 +286,6 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por año / años de aparicion*/
-    
     public LinkedListPlusRecursividadGenerico<E> ListaAñoAparicionTal(int añoAparicion){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -355,7 +345,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
          return Lista.ListaRazaTal(raza);
     }
     
-        /** Metodo terminado para buscar por poder y año tal*/
+    /** Metodo terminado para buscar por poder y año tal*/
     public LinkedListPlusRecursividadGenerico<E> ListaPoderYAñoAparicionTal(String poder, int añoAparicion){
         LinkedListPlusRecursividadGenerico<E> Lista = ListaPoderTal(poder);
         return Lista.ListaAñoAparicionTal(añoAparicion);
@@ -484,7 +474,6 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         //# AQUI VAMOS A MODIFICAR AGREGNDO METODOS ELIMINAR
     
     /** Eliminar de la lista por Alias*/
-    
     public void EliminarConAliasTal(String alias){
       for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getAlias().split(","); 

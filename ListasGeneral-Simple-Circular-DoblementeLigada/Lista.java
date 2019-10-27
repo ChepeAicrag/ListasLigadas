@@ -1,9 +1,4 @@
-/**
- * Abstract class Listas - write a description of the class here
- * 
- * @author: 
- * Date: 
- */
+
 public interface Lista <E>{
     public void mostrarLista();
     public E getInfoNodo(Nodo x);

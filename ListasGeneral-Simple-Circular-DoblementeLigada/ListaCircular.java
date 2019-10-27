@@ -49,7 +49,6 @@ public class ListaCircular<E> implements Lista<E>{
            tail.setSiguiente(x);
            tail = x;
         }
-      
     }
     
     public void mostrarLista(){  
@@ -140,7 +139,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
    /** Metodo termiando para buscar por alias */
-    
     public ListaCircular<E> ListaAliasTal(String alias){
         ListaCircular<E> Lista = new ListaCircular();
         Nodo i = head;
@@ -159,7 +157,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por nombre real */
-    
     public ListaCircular<E> ListaNombreRealTal(String nombreReal){
         ListaCircular<E> Lista = new ListaCircular();
         Nodo i = head;
@@ -177,7 +174,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por poder */
-    
     public ListaCircular<E> ListaPoderTal(String poder){
         ListaCircular<E> Lista = new ListaCircular();
         Nodo i = head;
@@ -195,7 +191,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por autor*/
-    
     public ListaCircular<E> ListaAutorTal(String autor){
         ListaCircular<E> Lista = new ListaCircular();
         Nodo i = head;
@@ -213,7 +208,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por origen*/
-    
     public ListaCircular<E> ListaOrigenTal(String origen){
         ListaCircular<E> Lista = new ListaCircular();
         Nodo i = head;
@@ -231,7 +225,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por comic*/
-    
     public ListaCircular<E> ListaComicTal(String comic){
         ListaCircular<E> Lista = new ListaCircular();
         Nodo i = head;
@@ -249,7 +242,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por afiliacion*/
-    
     public ListaCircular<E> ListaAfiliacionTal(String afiliacion){
         ListaCircular<E> Lista = new ListaCircular();
         Nodo i = head;
@@ -267,7 +259,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por raza*/
-    
     public ListaCircular<E> ListaRazaTal(String raza){
         ListaCircular<E> Lista = new ListaCircular();
         Nodo i = head;
@@ -285,7 +276,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     /**Metodo para qutar las tildes de un string, para hacer mas eficiente la busqueda*/
-    
     private static String cleanString(String info) {
         info = Normalizer.normalize(info, Normalizer.Form.NFD);
         info = info.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
@@ -293,7 +283,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por sexo */
-    
     public ListaCircular<E> ListaSexoTal(char sexo){
         ListaCircular<E> Lista = new ListaCircular();
         Nodo i = head;
@@ -309,7 +298,6 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     /** Metodo termiando para buscar por año / años de aparicion*/
-    
     public ListaCircular<E> ListaAñoAparicionTal(int añoAparicion){
         ListaCircular<E> Lista = new ListaCircular();
         Nodo i = head;
@@ -859,4 +847,3 @@ public class ListaCircular<E> implements Lista<E>{
         return lista;
     }
 }
-
