@@ -1,12 +1,14 @@
 
-/***
- * Test de el metodo impresion y busqueda, 
+/**
+ * Write a description of class Test02 here.
  * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Test1
+public class Test02
 {
    public static void main()throws Exception{
-       ListaDoblementeEnlazada <SuperHeroe >lista = new ListaDoblementeEnlazada();
+       ListaCircular <SuperHeroe >lista = new ListaCircular();
        Archivito.LlenarArchivo("SuperHeroesContenido"); //A la lista de parametro le agregamos todos los superheroes
        //lista.LlenarListaDesdeArchivo("SuperHeroesContenido");
        /**Muestra el archivo*/
@@ -22,24 +24,31 @@ public class Test1
         "Action Comics,Justice League of America,Miracle Monday,Adventures of Superman,Supergirl,Superwoman","Liga de la Justicia","Superhumana",1943,1962,1964,2009,2016);
         
         StdOut.println("\n\" Demon \" está despues de  " 
-                        + lista.getInfo(lista.buscar(demon).anterior));
+                        + lista.getInfoNode(lista.AntesDe(demon)));
        
        StdOut.println("\n\" Superwoman2 \" está despues de  " 
-                        + lista.getInfo(lista.buscar(superwoman2).anterior));
-                        
+                        + lista.getInfoNode(lista.AntesDe(superwoman2)));
+                                          
        StdOut.println("\n\" Demon \" está antes de  " 
-                        + lista.getInfo(lista.buscar(demon).siguiente));
+            + lista.getInfoNode(lista.DespuesDe(demon)));
        
        StdOut.println("\n\" Primero \" es  " 
-                        + lista.getInfo(lista.getCabeza()));
+                        + lista.getInfoNode(lista.getHead()));
                         
        StdOut.println("\n\" Ultimo \" es  " 
-                        + lista.getInfo(lista.getFin()));
+                        + lista.getInfoNode(lista.getTail()));
                         
        StdOut.println("\n\" Demon \" aparece en la lista  " 
-                        + ((lista.buscar(demon) != null) ? "Si aparece": "No se encuentra"));
+                        + ((lista.Buscar(demon) != null) ? "Si aparece": "No se encuentra"));
                         
-       StdOut.println("\n\" Null \" aparece en la lista  " 
-                        + ((lista.buscar(superwoman2) != null) ? "Si aparece": "No se encuentra"));
+       StdOut.println("\n\" Superwoman2 \" aparece en la lista  " 
+                        + ((lista.Buscar(superwoman2) != null) ? "Si aparece": "No se encuentra"));
+       
+       SuperHeroe demon2       = new SuperHeroe("Demon2","Atributos físicos y poderes sensoriales sobrehumanos,Capacidad de regeneración, Poderes mágicos,Precognición,Telepatía,Inmortalidad,Puede lanzar llamas de fuego místico,Vuelo",
+        'H',"Convive en un mismo cuerpo","Jack Kirby","Jason Blood","Gotham City","The Demon","Liga de la Justicia Oscura","Demonio",1972); 
+                         
+       StdOut.println("\n\" demon2 \" aparece en la lista  " 
+                        + ((lista.Buscar(demon2) != null) ? "Si aparece": "No se encuentra"));
+                        
    }
 }
