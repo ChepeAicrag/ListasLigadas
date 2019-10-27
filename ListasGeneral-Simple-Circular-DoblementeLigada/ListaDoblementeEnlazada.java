@@ -4,12 +4,7 @@ import java.io.*;
 public class ListaDoblementeEnlazada<E> implements Lista <E>{
     private Nodo cabeza;
     private Nodo fin;
-    /*public class Nodo {
-        E informacion;
-        Nodo anterior;
-        Nodo siguiente;
     
-    }  
     /** constructor que crea una LDE vacia. */
     public ListaDoblementeEnlazada() {
         cabeza = null;

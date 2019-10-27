@@ -6,10 +6,7 @@ public class Test01
 {
   public static void main()throws Exception{
        LinkedListPlusRecursividadGenerico <SuperHeroe >lista = new LinkedListPlusRecursividadGenerico();
-       CreacionSuperHeroes.llenarSuperHeroes(lista); //A la lista de parametro le agregamos todos los superheroes
-       
-       /**Muestra el archivo*/
-       Archivo.LeerArchivo("SuperHeroesContenido"); // Mostramos el archivo
+       Archivo.LeerArchivo(lista,"SuperHeroesContenido"); // Mostramos el archivo
        
          /**Test de los metodos */
         
@@ -37,7 +34,7 @@ public class Test01
                         + lista.getInfo(lista.BuscarUltimo()));
                         
        StdOut.println("\n\" Demon \" aparece en la lista  " 
-                        + lista.Buscar(demon));
+                        + lista.getInfo(lista.Buscar(demon)));
                         
        StdOut.println("\n\" Null \" aparece en la lista  " 
                         + lista.Buscar(null));

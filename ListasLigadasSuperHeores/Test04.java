@@ -6,10 +6,7 @@ public class Test04
 {
    public static void main()throws Exception{
        LinkedListPlusRecursividadGenerico <SuperHeroe >lista = new LinkedListPlusRecursividadGenerico();
-       CreacionSuperHeroes.llenarSuperHeroes(lista); //A la lista de parametro le agregamos todos los superheroes
-       
-       /**Muestra el archivo*/
-       Archivo.LeerArchivo("SuperHeroesContenido"); // Mostramos el archivo
+       Archivo.LeerArchivo(lista,"SuperHeroesContenido"); // Mostramos el archivo
        
        /**Test de los metodos */
            

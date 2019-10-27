@@ -1,13 +1,12 @@
-public class Test1
+
+/**
+ * Test de la Lista Simple
+ */
+public class TestSimple01
 {
    public static void main()throws Exception{
-       ListaDoblementeEnlazada <SuperHeroe >lista = new ListaDoblementeEnlazada();
-        LinkedListPlusRecursividadGenerico <SuperHeroe > lista2 = new LinkedListPlusRecursividadGenerico();
-       
-       CreacionSuperHeroes.llenarSuperHeroes(lista2); //A la lista de parametro le agregamos todos los superheroes
-       
-       /**Muestra el archivo*/
-       Archivito.LeerArchivo("SuperHeroesContenido"); // Mostramos el archivo
+       LinkedListPlusRecursividadGenerico <SuperHeroe >lista = new LinkedListPlusRecursividadGenerico();
+       Archivito.LeerArchivo(lista,"Heroes");
        
          /**Test de los metodos */
         
@@ -20,8 +19,8 @@ public class Test1
         
         
        StdOut.println("\n\" Demon \" está despues de  " 
-                        + lista.getInfo(lista.buscar(demon)));
-       /*
+                        + lista.AntesDeInfo(demon));
+       
        StdOut.println("\n\" Superwoman2 \" está despues de  " 
                         + lista.AntesDeInfo(superwoman2));
                         
@@ -29,16 +28,15 @@ public class Test1
                         + lista.DespuesDeInfo(demon));
        
        StdOut.println("\n\" Primero \" es  " 
-                        + lista.getInfo(lista.getRaiz()));
+                        + lista.getInfoNodo(lista.getCabeza()));
                         
        StdOut.println("\n\" Ultimo \" es  " 
-                        + lista.getInfo(lista.BuscarUltimo()));
+                        + lista.getInfoNodo(lista.getFin()));
                         
        StdOut.println("\n\" Demon \" aparece en la lista  " 
-                        + lista.Buscar(demon));
+                        + lista.buscar(demon));
                         
        StdOut.println("\n\" Null \" aparece en la lista  " 
-                        + lista.Buscar(null));
-     */
-   }
+                        + lista.buscar(null));
+     }
 }

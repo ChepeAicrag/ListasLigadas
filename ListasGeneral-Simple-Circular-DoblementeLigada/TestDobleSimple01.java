@@ -1,4 +1,4 @@
-public class Test1
+public class TestDobleSimple01
 {
    public static void main()throws Exception{
        ListaDoblementeEnlazada <SuperHeroe >lista = new ListaDoblementeEnlazada();
@@ -32,7 +32,7 @@ public class Test1
                         + lista.buscar(demon).getInformacion());
                         
        StdOut.println("\n\" Null \" aparece en la lista  " 
-                        + lista.buscar(null).getInformacion());
+                        + lista.buscar(null));
      
    }
 }
