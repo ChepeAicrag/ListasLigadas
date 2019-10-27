@@ -1,5 +1,6 @@
 import java.text.Normalizer;
 import java.util.*;
+import java.io.*;
 public class ListaDoblementeEnlazada<E> {
     private Nodo cabeza;
     private Nodo fin;
@@ -9,14 +10,34 @@ public class ListaDoblementeEnlazada<E> {
         Nodo anterior;
         Nodo siguiente;
     
-    }
-    
+    }  
     /** constructor que crea una LDE vacia. */
     public ListaDoblementeEnlazada() {
         cabeza = null;
         fin = null;
     }
     
+    /**Llenar una lista desde archivo*/
+    public void LlenarListaDesdeArchivo(String nom) throws Exception{
+        ObjectInputStream flujoObjetoEntrada = null;
+        FileInputStream flujoArchivoEntrada = null;
+        try{
+            File archivoSalida = new File(nom+".txt");     
+            flujoArchivoEntrada = new FileInputStream(archivoSalida);
+            flujoObjetoEntrada = new ObjectInputStream(flujoArchivoEntrada);
+            Object per = flujoObjetoEntrada.readObject();  
+            System.out.println("Rellenando la lista...");
+           while(per != null){
+             insertarInicio((E)per);
+             per = flujoObjetoEntrada.readObject();
+           }    
+       }catch(IOException error){
+            System.out.println("******** Lista Rellenada *******"); 
+    }finally{
+            flujoArchivoEntrada.close();
+            flujoObjetoEntrada.close();
+      }  
+   }
     /**
      * Metodos combiandos que generan lista, apartir de listas (Filtrado)
      * 

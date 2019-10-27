@@ -8,11 +8,11 @@
 public class Test03
 {
     public static void main()throws Exception{
-        ListaDoblementeEnlazada <SuperHeroe >Lista = new ListaDoblementeEnlazada();
-       CreacionSuperHeroes.llenarSuperHeroes(Lista); //A la Lista de parametro le agregamos todos los superheroes
-       
+       ListaDoblementeEnlazada <SuperHeroe >Lista = new ListaDoblementeEnlazada();
+       Archivito.LlenarArchivo("SuperHeroesContenido"); //A la lista de parametro le agregamos todos los superheroes
+       //Lista.LlenarListaDesdeArchivo("SuperHeroesContenido");
        /**Muestra el archivo*/
-       Archivito.LeerArchivo("SuperHeroesContenido"); // Mostramos el archivo
+       Archivito.LeerArchivo(Lista,"SuperHeroesContenido"); // Mostramos el archivo
        
          /**Test de los metodos */
            

@@ -3,10 +3,10 @@ public class Test02
 {
    public static void main()throws Exception{
        ListaDoblementeEnlazada <SuperHeroe >lista = new ListaDoblementeEnlazada();
-       CreacionSuperHeroes.llenarSuperHeroes(lista); //A la lista de parametro le agregamos todos los superheroes
-       
+       Archivito.LlenarArchivo("SuperHeroesContenido"); //A la lista de parametro le agregamos todos los superheroes
+       //lista.LlenarListaDesdeArchivo("SuperHeroesContenido");
        /**Muestra el archivo*/
-       Archivito.LeerArchivo("SuperHeroesContenido"); // Mostramos el archivo
+       Archivito.LeerArchivo(lista,"SuperHeroesContenido"); // Mostramos el archivo
        lista.mostrar(lista.getCabeza());
          /**Test de los metodos */
         

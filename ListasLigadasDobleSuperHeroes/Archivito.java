@@ -1,8 +1,12 @@
 
+/**
+ * Clase para crear un archivo y llenar una lista con archivo 
+   
+   */
 import java.io.*;
 public class Archivito
 {
-    public static void LlenarArchivo(ListaDoblementeEnlazada lista,String nom) throws Exception{
+    public static void LlenarArchivo(String nom) throws Exception{
       Object superheroe=null; 
       File archivoSalida;
       FileOutputStream flujoArchivoSalida = null;
@@ -11,11 +15,10 @@ public class Archivito
             archivoSalida = new File(nom+".txt");
             flujoArchivoSalida = new FileOutputStream(archivoSalida);
             flujoObjetoSalida = new ObjectOutputStream(flujoArchivoSalida);
-           // if(lista instanceof LinkedListPlusRecursividadGenerico ){
-            for(int i=0;i<lista.formaVector().size();i++){
-                superheroe = lista.formaVector().elementAt(i);  
+            for(int i = 0; i < CreacionSuperHeroes.llenarSuperHeroes().size(); i++){
+                superheroe = CreacionSuperHeroes.llenarSuperHeroes().elementAt(i);  
                 flujoObjetoSalida.writeObject(superheroe);
-            }//}
+            }
       }catch(IOException error){
         System.out.println("Termina la escritura xd");
         }
@@ -24,8 +27,7 @@ public class Archivito
             flujoArchivoSalida.close();
         }  
   }
-  
- public static void LeerArchivo(String nom) throws Exception{
+ public static void LeerArchivo(ListaDoblementeEnlazada lista,String nom) throws Exception{
     ObjectInputStream flujoObjetoEntrada = null;
     FileInputStream flujoArchivoEntrada = null;
     try{
@@ -35,6 +37,7 @@ public class Archivito
         Object per = flujoObjetoEntrada.readObject();   
         StdOut.println("\n******** MOSTRANDO ARCHIVO *******");
         while(per != null){
+             lista.insertarInicio(per);
              System.out.print(((SuperHeroe)per).toString());
              per = flujoObjetoEntrada.readObject();
          }    
