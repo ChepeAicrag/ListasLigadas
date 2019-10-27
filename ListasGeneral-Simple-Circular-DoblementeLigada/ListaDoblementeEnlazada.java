@@ -113,6 +113,10 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         Nodo buscado = null;
         Nodo iterador = cabeza;
         while ( buscado == null && iterador != null ) {
+            if(dato == null){
+                buscado = new Nodo();
+                buscado.setInformacion("No se encuentra null");
+                break;}
             if ( iterador.getInformacion().equals(dato) ) {
                 buscado = iterador;
             }
