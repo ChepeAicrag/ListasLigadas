@@ -73,37 +73,56 @@ public class ListaCircular<E> implements Lista<E>{
     public Nodo buscar(E dato){
         Nodo buscado = null;
         Nodo iterador = head;
-        while ( buscado == null && iterador != null ) {
-            if ( iterador.getInformacion().equals(dato) ) {
-                buscado = iterador;
-            }
+        if(dato != null){ // Si es diferente de null se busca, de lo contrario es null
+           do{
+              if ( iterador.getInformacion().equals(dato) ) 
+                   buscado = iterador;
             iterador = iterador.getSiguiente();
+          }while ( buscado == null && iterador != head );
         }
         return buscado;
     }
     
     public Nodo AntesDe(E x){
         Nodo temp = null;
-        if(buscar(x) != null) //Comprobar de lo que vamos a buscar existe
+        if(buscar(x) != null){ //Comprobar de lo que vamos a buscar existe
             if(head.getInformacion().equals(x)) //Caso especial de buscar antes de head, se retorna a tail
                 return tail;
              else 
                 for(Nodo i = head; i.getSiguiente() != head; i = i.getSiguiente())
                     if(i.getSiguiente().getInformacion().equals(x))
                         temp = i;
+        }
         return temp; 
     }
     
     /** Si solo queremos el nodo que está despues*/
     public Nodo DespuesDe(E x){
         Nodo temp = null;
-        if(buscar(x) != null)
+        if(buscar(x) != null){
               if(tail.getInformacion().equals(x)) //Caso especial si se busca depues de tail, entonces se retorna a head
                  return head;
               for(Nodo i = head; i.getSiguiente() != head; i = i.getSiguiente())
                   if(i.getInformacion().equals(x))
                      temp = i.getSiguiente();
+        }
         return temp; 
+    }
+    //problema
+    
+    public void Eliminar(E x){
+        if(buscar(x) == null)
+            StdOut.println("No está en la lista, no se puede eliminar");
+        else{
+             if(x == head)
+                eliminarInicio();
+             if(x == tail)
+                eliminarFinal();
+              else{    
+                  Nodo temp = AntesDe(x);
+                  temp.setSiguiente ( temp.getSiguiente().getSiguiente());
+                }
+        }
     }
     
     public void eliminarInicio(){
@@ -115,10 +134,9 @@ public class ListaCircular<E> implements Lista<E>{
     
     public void eliminarFinal(){
         if(!estaVacia()){
-            Nodo temp = AntesDe((E)getFin());
+            Nodo temp = AntesDe((E)getFin().getInformacion());
             temp.setSiguiente(head);
-        }
-            
+        } 
     }
     
    /** Metodo termiando para buscar por alias */

@@ -34,8 +34,18 @@ public class Test01
        StdOut.println("\n\" Ultimo \" es  " 
                         + lista.getInfoNodo(lista.getFin()));
                         
+       lista.eliminarInicio();                 
+        lista.mostrarLista();
+
+    StdOut.println("\n\" Primero \" es  " 
+                        + lista.getInfoNodo(lista.getCabeza()));
+                        
+       StdOut.println("\n\" Ultimo \" es  " 
+                        + lista.getInfoNodo(lista.getFin()));                 
+                        
+                        
        StdOut.println("\n\" Demon \" aparece en la lista  " 
-                        + lista.buscar(demon));
+                        + lista.getInfoNodo(lista.buscar(demon)));
                         
        StdOut.println("\n\" Null \" aparece en la lista  " 
                         + lista.buscar(null));

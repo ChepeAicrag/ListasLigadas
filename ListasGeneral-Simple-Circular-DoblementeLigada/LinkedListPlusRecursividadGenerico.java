@@ -105,16 +105,16 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     public void Eliminar(E x){
         if(buscar(x) == null)
             StdOut.println("No está en la Lista");
-        if(buscar(x) == raiz)
-            eliminarInicio();
-        if(buscar(x) == getFin())
-            eliminarFinal();
         else{
-            Nodo temp = AntesDe(x);
-            if(raiz.getInformacion().equals(x))
-                raiz = raiz.getSiguiente(); 
-            if(temp!=null)
-            temp.setSiguiente(temp.getSiguiente().getSiguiente());
+            if(buscar(x) == raiz)
+                eliminarInicio();
+            if(buscar(x) == getFin())
+                eliminarFinal();
+             else{
+                 Nodo temp = AntesDe(x); 
+                 if(temp!=null)
+                 temp.setSiguiente(temp.getSiguiente().getSiguiente());
+          }
         }
     }
     

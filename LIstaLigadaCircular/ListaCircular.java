@@ -29,7 +29,7 @@ public class ListaCircular<E>{
     }
     
     public void InsertarPrimero(E dato){
-      if(Vacia()){
+      if(estaVacia()){
           head = new Node();
           head.informacion = dato;
           head.siguiente = head;
@@ -44,7 +44,7 @@ public class ListaCircular<E>{
     }
     
     public void InsertarFinal(E dato){
-      if(Vacia())
+      if(estaVacia())
          InsertarPrimero(dato); //Lo mismo que agregar al inicio
       else{
            Node x = new Node();
@@ -58,8 +58,8 @@ public class ListaCircular<E>{
     
     public void ImprimirLista(){  
         Node temp = head;
-        if(temp == null)
-           StdOut.println("Lista vacia!!");
+        if(estaVacia())
+           StdOut.println("Lista estaVacia!!");
         else
             do{
                 StdOut.println(temp.informacion);
@@ -68,7 +68,7 @@ public class ListaCircular<E>{
                    
     }
     
-    public boolean Vacia(){
+    public boolean estaVacia(){
         if(head == null)
             return true;
         return false;    
@@ -77,45 +77,71 @@ public class ListaCircular<E>{
     public Node Buscar(E dato){
         Node buscado = null;
         Node iterador = head;
-        while ( buscado == null && iterador != null ) {
-            if ( iterador.informacion.equals(dato) ) {
-                buscado = iterador;
-            }
+        if(dato != null){ // Si es diferente de null se busca, de lo contrario es false
+            do{
+               if ( iterador.informacion.equals(dato)) 
+                   buscado = iterador;
             iterador = iterador.siguiente;
+          }while ( buscado == null && iterador != head );
         }
         return buscado;
     }
     
     public Node AntesDe(E x){
         Node temp = null;
-        if(Buscar(x) != null) //Comprobar de lo que vamos a buscar existe
+        if(Buscar(x) != null){ //Comprobar de lo que vamos a buscar existe
             if(head.informacion.equals(x)) //Caso especial de buscar antes de head, se retorna a tail
                 return tail;
              else 
                 for(Node i = head; i.siguiente != head; i = i.siguiente)
                     if(i.siguiente.informacion.equals(x))
                         temp = i;
+        }
         return temp; 
     }
     
     /** Si solo queremos el nodo que está despues*/
     public Node DespuesDe(E x){
         Node temp = null;
-        if(Buscar(x) != null)
+        if(Buscar(x) != null){
               if(tail.informacion.equals(x)) //Caso especial si se busca depues de tail, entonces se retorna a head
                  return head;
               for(Node i = head; i.siguiente != head; i = i.siguiente)
                   if(i.informacion.equals(x))
                      temp = i.siguiente;
+        }
         return temp; 
     }
     
+    public void Eliminar(E x){
+        if(Buscar(x) == null)
+            StdOut.println("No está en la lista, no se puede eliminar");
+        else{
+             if(Buscar(x) == head)
+                EliminarInicio();
+             if(Buscar(x) == tail)
+                eliminarFinal();
+              else{    
+                  Node temp = AntesDe(x);
+                  temp.siguiente = temp.siguiente.siguiente;
+                }
+        }
+    }
+    
     public void EliminarInicio(){
-        if(!Vacia()){
+        if(!estaVacia()){
             head = head.siguiente;
             tail.siguiente = tail.siguiente.siguiente;
         }
             
+    }
+    
+    public void eliminarFinal(){
+        if(!estaVacia()){
+            Node temp = AntesDe(getTail().informacion);
+            tail = temp;
+            temp.siguiente = head;
+        } 
     }
     
     /**Es mejor recorrerla así, está completa*/
@@ -126,21 +152,14 @@ public class ListaCircular<E>{
             temp = temp.siguiente;
         }while(temp != head);
     }
-    
-    
-        /**
-     * 
-     * Estos metodos no estoy seguro de que vayan aqui
-     *  
-     */
       
    /** Metodo termiando para buscar por alias */
     
     public ListaCircular<E> ListaAliasTal(String alias){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
         else
             do{    
                 String [] temp = ((SuperHeroe)(i.informacion)).getAlias().split(","); 
@@ -158,8 +177,8 @@ public class ListaCircular<E>{
     public ListaCircular<E> ListaNombreRealTal(String nombreReal){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
         else
             do{    
                 String [] temp = ((SuperHeroe)(i.informacion)).getNombreReal().split(","); 
@@ -176,8 +195,8 @@ public class ListaCircular<E>{
     public ListaCircular<E> ListaPoderTal(String poder){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
         else
             do{    
                 String [] temp = ((SuperHeroe)(i.informacion)).getPoder().split(","); 
@@ -194,8 +213,8 @@ public class ListaCircular<E>{
     public ListaCircular<E> ListaAutorTal(String autor){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
          else
             do{ 
                 String [] temp = ((SuperHeroe)(i.informacion)).getAutor().split(","); 
@@ -212,8 +231,8 @@ public class ListaCircular<E>{
     public ListaCircular<E> ListaOrigenTal(String origen){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
         else
             do{ 
                 String [] temp = ((SuperHeroe)(i.informacion)).getOrigen().split(","); 
@@ -230,8 +249,8 @@ public class ListaCircular<E>{
     public ListaCircular<E> ListaComicTal(String comic){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
         else
             do{ 
                 String [] temp = ((SuperHeroe)(i.informacion)).getComic().split(","); 
@@ -248,8 +267,8 @@ public class ListaCircular<E>{
     public ListaCircular<E> ListaAfiliacionTal(String afiliacion){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
         else
             do{    
                 String [] temp = ((SuperHeroe)(i.informacion)).getAfiliacionActual().split(","); 
@@ -266,8 +285,8 @@ public class ListaCircular<E>{
     public ListaCircular<E> ListaRazaTal(String raza){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
         else
             do{    
                 String [] temp = ((SuperHeroe)(i.informacion)).getRaza().split(","); 
@@ -283,8 +302,8 @@ public class ListaCircular<E>{
     public ListaCircular<E> ListaDebilidadTal(String debilidad){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
         else
             do{    
                 String [] temp = ((SuperHeroe)(i.informacion)).getDebilidad().split(","); 
@@ -309,8 +328,8 @@ public class ListaCircular<E>{
     public ListaCircular<E> ListaSexoTal(char sexo){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
         else
             do{    
                 if(((SuperHeroe)(i.informacion)).getSexo() == sexo)
@@ -325,8 +344,8 @@ public class ListaCircular<E>{
     public ListaCircular<E> ListaAñoAparicionTal(int añoAparicion){
         ListaCircular<E> Lista = new ListaCircular();
         Node i = head;
-        if(Vacia())
-            StdOut.println("La lista está vacia, se regreso una vacia");
+        if(estaVacia())
+            StdOut.println("La lista está estaVacia, se regreso una estaVacia");
         else
             do{    
                 for(int j = 0; j < ((SuperHeroe)(i.informacion)).getAñoAparicion().length; j++)
