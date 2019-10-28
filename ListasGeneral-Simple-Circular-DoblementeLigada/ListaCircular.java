@@ -623,227 +623,228 @@ public class ListaCircular<E> implements Lista<E>{
             }while(i != head);
     }
     
-        /** Metodo terminado para obtener lista eliminando con sexo y poder tal*/
-    public ListaCircular<E> ListaEliminandoConSexoYPoderTal(ListaCircular listaOriginal,char sexo, String poder){
-        ListaCircular<E> lista = listaOriginal; //Clonamos la lista  
+    /** Metodo terminado para obtener lista eliminando con sexo y poder tal*/
+    public ListaCircular<E> ListaEliminandoConSexoYPoderTal(Lista <E>  listaOriginal,char sexo, String poder){
+        ListaCircular<E> lista = (ListaCircular<E>) listaOriginal; //Clonamos la lista  
         lista.EliminarConSexoTal(sexo);
         lista.EliminarConPoderTal(poder);
         return lista; //Se retorna dicha lista clonada, ya con elementos eliminados
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y año tal*/
-    public ListaCircular<E> ListaEliminandoConSexoYAñoAparicionTal(ListaCircular listaOriginal,char sexo, int añoAparicion){
-        ListaCircular<E> lista = listaOriginal;
+    public ListaCircular<E> ListaEliminandoConSexoYAñoAparicionTal(Lista <E>  listaOriginal,char sexo, int añoAparicion){
+        ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
         lista.EliminarConSexoTal(sexo);
         lista.EliminarConAñoAparicionTal(añoAparicion);
         return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y autor tal*/
-    public ListaCircular<E> ListaEliminandoConSexoYAutorTal(ListaCircular listaOriginal,char sexo, String autor){
-         ListaCircular<E> lista = listaOriginal;
+    public ListaCircular<E> ListaEliminandoConSexoYAutorTal(Lista <E>  listaOriginal,char sexo, String autor){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConAutorTal(autor);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y origen tal*/
-    public ListaCircular<E> ListaEliminandoConSexoYOrigenTal(ListaCircular listaOriginal,char sexo, String origen){
-         ListaCircular<E> lista = listaOriginal;
+    public ListaCircular<E> ListaEliminandoConSexoYOrigenTal(Lista <E>  listaOriginal,char sexo, String origen){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y comic tal*/
-    public  ListaCircular<E> ListaEliminandoConSexoYComicTal(ListaCircular listaOriginal,char sexo, String comic){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConSexoYComicTal(Lista <E>  listaOriginal,char sexo, String comic){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y afiliacion tal*/
-    public  ListaCircular<E> ListaEliminandoConSexoYAfiliacionTal(ListaCircular listaOriginal,char sexo, String afiliacion){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConSexoYAfiliacionTal(Lista <E>  listaOriginal,char sexo, String afiliacion){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y raza tal*/
-    public  ListaCircular<E> ListaEliminandoConSexoYRazaTal(ListaCircular listaOriginal,char sexo, String raza){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConSexoYRazaTal(Lista <E>  listaOriginal,char sexo, String raza){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y año tal*/
-    public ListaCircular<E> ListaEliminandoConPoderYAñoAparicionTal(ListaCircular listaOriginal,String poder, int añoAparicion){
-        ListaCircular<E> lista = listaOriginal;
+    public ListaCircular<E> ListaEliminandoConPoderYAñoAparicionTal(Lista <E>  listaOriginal,String poder, int añoAparicion){
+        ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
         lista.EliminarConPoderTal(poder);
         lista.EliminarConAñoAparicionTal(añoAparicion);
         return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y autor tal*/
-    public ListaCircular<E> ListaEliminandoConPoderYAutorTal(ListaCircular listaOriginal,String poder, String autor){
-         ListaCircular<E> lista = listaOriginal;
+    public ListaCircular<E> ListaEliminandoConPoderYAutorTal(Lista <E>  listaOriginal,String poder, String autor){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConAutorTal(autor);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y origen tal*/
-    public ListaCircular<E> ListaElimiandoConPoderYOrigenTal(ListaCircular listaOriginal,String poder, String origen){
-         ListaCircular<E> lista = listaOriginal;
+    public ListaCircular<E> ListaEliminandoConPoderYOrigenTal(Lista <E>  listaOriginal,String poder, String origen){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y comic tal*/
-    public  ListaCircular<E> ListaEliminandConPoderYComicTal(ListaCircular listaOriginal,String poder, String comic){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConPoderYComicTal(Lista <E>  listaOriginal,String poder, String comic){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y afiliacion tal*/
-    public  ListaCircular<E> ListaEliminandoConPoderYAfiliacionTal(ListaCircular listaOriginal,String poder, String afiliacion){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConPoderYAfiliacionTal(Lista <E>  listaOriginal,String poder, String afiliacion){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y raza tal*/
-    public  ListaCircular<E> ListaEliminandoConPoderYRazaTal(ListaCircular listaOriginal,String poder, String raza){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConPoderYRazaTal(Lista <E>  listaOriginal,String poder, String raza){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y autor tal*/
-    public ListaCircular<E> ListaEliminandoConAñoAparicionYAutorTal(ListaCircular listaOriginal,int añoAparicion, String autor){
-         ListaCircular<E> lista = listaOriginal;
+    public ListaCircular<E> ListaEliminandoConAñoAparicionYAutorTal(Lista <E>  listaOriginal,int añoAparicion, String autor){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConAutorTal(autor);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y origen tal*/
-    public ListaCircular<E> ListaEliminandoConAñoAparicionYOrigenTal(ListaCircular listaOriginal,int añoAparicion, String origen){
-         ListaCircular<E> lista = listaOriginal;
+    public ListaCircular<E> ListaEliminandoConAñoAparicionYOrigenTal(Lista <E>  listaOriginal,int añoAparicion, String origen){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y comic tal*/
-    public  ListaCircular<E> ListaEliminandoConAñoAparicionYComicTal(ListaCircular listaOriginal,int añoAparicion, String comic){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConAñoAparicionYComicTal(Lista <E>  listaOriginal,int añoAparicion, String comic){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y afiliacion tal*/
-    public  ListaCircular<E> ListaEliminandoConAñoAparicionYAfiliacionTal(ListaCircular listaOriginal,int añoAparicion, String afiliacion){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConAñoAparicionYAfiliacionTal(Lista <E>  listaOriginal,int añoAparicion, String afiliacion){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y raza tal*/
-    public  ListaCircular<E> listaAñoAparicionYRazaTal(ListaCircular listaOriginal,int añoAparicion, String raza){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConAñoAparicionYRazaTal(Lista <E>  listaOriginal,int añoAparicion, String raza){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y origen tal*/
-    public ListaCircular<E> listaAutorYOrigenTal(ListaCircular listaOriginal,String autor, String origen){
-         ListaCircular<E> lista = listaOriginal;
+    public ListaCircular<E> ListaEliminandoConAutorYOrigenTal(Lista <E>  listaOriginal,String autor, String origen){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y comic tal*/
-    public  ListaCircular<E> listaAutorYComicTal(ListaCircular listaOriginal,String autor, String comic){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConAutorYComicTal(Lista <E>  listaOriginal,String autor, String comic){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y afiliacion tal*/
-    public  ListaCircular<E> listaAutorYAfiliacionTal(ListaCircular listaOriginal,String autor, String afiliacion){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConAutorYAfiliacionTal(Lista <E>  listaOriginal,String autor, String afiliacion){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y raza tal*/
-    public  ListaCircular<E> listaAutorYRazaTal(ListaCircular listaOriginal,String autor, String raza){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConAutorYRazaTal(Lista <E>  listaOriginal,String autor, String raza){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con origen y comic tal*/
-    public  ListaCircular<E> listaOrigenYComicTal(ListaCircular listaOriginal,String origen, String comic){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConOrigenYComicTal(Lista <E>  listaOriginal,String origen, String comic){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConOrigenTal(origen);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con origen y afiliacion tal*/
-    public  ListaCircular<E> listaOrigenYAfiliacionTal(ListaCircular listaOriginal,String origen, String afiliacion){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConOrigenYAfiliacionTal(Lista <E>  listaOriginal,String origen, String afiliacion){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConOrigenTal(origen);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con origen y raza tal*/
-    public  ListaCircular<E> listaOrigenYRazaTal(ListaCircular listaOriginal,String origen, String raza){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConOrigenYRazaTal(Lista <E>  listaOriginal,String origen, String raza){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConOrigenTal(origen);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con y afiliacion tal*/
-    public  ListaCircular<E> listaComicYAfiliacionTal(ListaCircular listaOriginal,String comic, String afiliacion){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConComicYAfiliacionTal(Lista <E>  listaOriginal,String comic, String afiliacion){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConComicTal(comic);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con y raza tal*/
-    public  ListaCircular<E> listaComicYRazaTal(ListaCircular listaOriginal,String comic, String raza){
-         ListaCircular<E> lista = listaOriginal;
+    public  ListaCircular<E> ListaEliminandoConComicYRazaTal(Lista <E>  listaOriginal,String comic, String raza){
+         ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
          lista.EliminarConComicTal(comic);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con afiliacion y raza tal*/
-    public ListaCircular<E> EliminarAfiliacionYRazaTal(ListaCircular listaOriginal,String afiliacion, String raza){
-        ListaCircular<E> lista = new ListaCircular();
+    public ListaCircular<E> ListaEliminandoConAfiliacionYRazaTal(Lista <E>  listaOriginal,String afiliacion, String raza){
+        ListaCircular<E> lista = (ListaCircular<E>) listaOriginal;
         lista.EliminarConAfiliacionTal(afiliacion); 
         lista.EliminarConRazaTal(raza);
         return lista;
     }
+    
 }

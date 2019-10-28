@@ -481,7 +481,6 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
                     if(cleanString(temp[j]).equalsIgnoreCase(cleanString(alias)))
                         Eliminar(((E)(i.getInformacion())));
             }
-       
     }
     
     /** Metodo termiando para eliminar con nombre real */
@@ -492,7 +491,6 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
                     if(cleanString(temp[j]).equalsIgnoreCase(cleanString(nombreReal)))
                         Eliminar(((E)(i.getInformacion())));
             }
-       
     }
     
     /** Metodo termiando para eliminar con poder */
@@ -503,7 +501,6 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
                     if(cleanString(temp[j]).equalsIgnoreCase(cleanString(poder)))
                         Eliminar(((E)(i.getInformacion())));
             }
-       
     }
     
     /** Metodo termiando para eliminar con autor*/
@@ -514,7 +511,6 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
                     if(cleanString(temp[j]).equalsIgnoreCase(cleanString(autor)))
                         Eliminar(((E)(i.getInformacion())));
             }
-       
     }
     
     /** Metodo termiando para eliminar con origen*/
@@ -525,7 +521,6 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
                     if(cleanString(temp[j]).equalsIgnoreCase(cleanString(origen)))
                         Eliminar(((E)(i.getInformacion())));
             }
-       
     }
     
     /** Metodo termiando para eliminar con comic*/
@@ -536,7 +531,6 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
                     if(cleanString(temp[j]).equalsIgnoreCase(cleanString(comic)))
                         Eliminar(((E)(i.getInformacion())));
             }
-       
     }
     
     /** Metodo termiando para eliminar con afiliacion*/
@@ -547,7 +541,6 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
                     if(cleanString(temp[j]).equalsIgnoreCase(cleanString(afiliacion)))
                         Eliminar(((E)(i.getInformacion())));
             }
-       
     }
     
     /** Metodo termiando para eliminar con raza*/
@@ -558,7 +551,6 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
                     if(cleanString(temp[j]).equalsIgnoreCase(cleanString(raza)))
                         Eliminar(((E)(i.getInformacion())));
             }
-       
     }
     
     /** Metodo termiando para eliminar con sexo */
@@ -567,7 +559,6 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
                 if(((SuperHeroe)(i.getInformacion())).getSexo() == sexo)
                     Eliminar(((E)(i.getInformacion())));
             }
-       
     }
     
     /** Metodo termiando para eliminar con año / años de aparicion*/
@@ -577,228 +568,227 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
                     if(((SuperHeroe)(i.getInformacion())).getAñoAparicion()[j] == añoAparicion)
                          Eliminar(((E)(i.getInformacion())));
             }
-       
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y poder tal*/
-    public ListaDoblementeEnlazada<E> ListaEliminandoConSexoYPoderTal(ListaDoblementeEnlazada listaOriginal,char sexo, String poder){
-        ListaDoblementeEnlazada<E> lista = listaOriginal; //Clonamos la lista  
+    public ListaDoblementeEnlazada<E> ListaEliminandoConSexoYPoderTal(Lista<E> listaOriginal,char sexo, String poder){
+        ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal; //Clonamos la lista  
         lista.EliminarConSexoTal(sexo);
         lista.EliminarConPoderTal(poder);
         return lista; //Se retorna dicha lista clonada, ya con elementos eliminados
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y año tal*/
-    public ListaDoblementeEnlazada<E> ListaEliminandoConSexoYAñoAparicionTal(ListaDoblementeEnlazada listaOriginal,char sexo, int añoAparicion){
-        ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public ListaDoblementeEnlazada<E> ListaEliminandoConSexoYAñoAparicionTal(Lista<E> listaOriginal,char sexo, int añoAparicion){
+        ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
         lista.EliminarConSexoTal(sexo);
         lista.EliminarConAñoAparicionTal(añoAparicion);
         return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y autor tal*/
-    public ListaDoblementeEnlazada<E> ListaEliminandoConSexoYAutorTal(ListaDoblementeEnlazada listaOriginal,char sexo, String autor){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public ListaDoblementeEnlazada<E> ListaEliminandoConSexoYAutorTal(Lista<E> listaOriginal,char sexo, String autor){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConAutorTal(autor);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y origen tal*/
-    public ListaDoblementeEnlazada<E> ListaEliminandoConSexoYOrigenTal(ListaDoblementeEnlazada listaOriginal,char sexo, String origen){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public ListaDoblementeEnlazada<E> ListaEliminandoConSexoYOrigenTal(Lista<E> listaOriginal,char sexo, String origen){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y comic tal*/
-    public  ListaDoblementeEnlazada<E> ListaEliminandoConSexoYComicTal(ListaDoblementeEnlazada listaOriginal,char sexo, String comic){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConSexoYComicTal(Lista<E> listaOriginal,char sexo, String comic){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y afiliacion tal*/
-    public  ListaDoblementeEnlazada<E> ListaEliminandoConSexoYAfiliacionTal(ListaDoblementeEnlazada listaOriginal,char sexo, String afiliacion){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConSexoYAfiliacionTal(Lista<E> listaOriginal,char sexo, String afiliacion){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y raza tal*/
-    public  ListaDoblementeEnlazada<E> ListaEliminandoConSexoYRazaTal(ListaDoblementeEnlazada listaOriginal,char sexo, String raza){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConSexoYRazaTal(Lista<E> listaOriginal,char sexo, String raza){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y año tal*/
-    public ListaDoblementeEnlazada<E> ListaEliminandoConPoderYAñoAparicionTal(ListaDoblementeEnlazada listaOriginal,String poder, int añoAparicion){
-        ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public ListaDoblementeEnlazada<E> ListaEliminandoConPoderYAñoAparicionTal(Lista<E> listaOriginal,String poder, int añoAparicion){
+        ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
         lista.EliminarConPoderTal(poder);
         lista.EliminarConAñoAparicionTal(añoAparicion);
         return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y autor tal*/
-    public ListaDoblementeEnlazada<E> ListaEliminandoConPoderYAutorTal(ListaDoblementeEnlazada listaOriginal,String poder, String autor){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public ListaDoblementeEnlazada<E> ListaEliminandoConPoderYAutorTal(Lista<E> listaOriginal,String poder, String autor){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConAutorTal(autor);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y origen tal*/
-    public ListaDoblementeEnlazada<E> ListaElimiandoConPoderYOrigenTal(ListaDoblementeEnlazada listaOriginal,String poder, String origen){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public ListaDoblementeEnlazada<E> ListaEliminandoConPoderYOrigenTal(Lista<E> listaOriginal,String poder, String origen){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y comic tal*/
-    public  ListaDoblementeEnlazada<E> ListaEliminandConPoderYComicTal(ListaDoblementeEnlazada listaOriginal,String poder, String comic){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConPoderYComicTal(Lista<E> listaOriginal,String poder, String comic){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y afiliacion tal*/
-    public  ListaDoblementeEnlazada<E> ListaEliminandoConPoderYAfiliacionTal(ListaDoblementeEnlazada listaOriginal,String poder, String afiliacion){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConPoderYAfiliacionTal(Lista<E> listaOriginal,String poder, String afiliacion){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y raza tal*/
-    public  ListaDoblementeEnlazada<E> ListaEliminandoConPoderYRazaTal(ListaDoblementeEnlazada listaOriginal,String poder, String raza){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConPoderYRazaTal(Lista<E> listaOriginal,String poder, String raza){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y autor tal*/
-    public ListaDoblementeEnlazada<E> ListaEliminandoConAñoAparicionYAutorTal(ListaDoblementeEnlazada listaOriginal,int añoAparicion, String autor){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public ListaDoblementeEnlazada<E> ListaEliminandoConAñoAparicionYAutorTal(Lista<E> listaOriginal,int añoAparicion, String autor){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConAutorTal(autor);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y origen tal*/
-    public ListaDoblementeEnlazada<E> ListaEliminandoConAñoAparicionYOrigenTal(ListaDoblementeEnlazada listaOriginal,int añoAparicion, String origen){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public ListaDoblementeEnlazada<E> ListaEliminandoConAñoAparicionYOrigenTal(Lista<E> listaOriginal,int añoAparicion, String origen){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y comic tal*/
-    public  ListaDoblementeEnlazada<E> ListaEliminandoConAñoAparicionYComicTal(ListaDoblementeEnlazada listaOriginal,int añoAparicion, String comic){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConAñoAparicionYComicTal(Lista<E> listaOriginal,int añoAparicion, String comic){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y afiliacion tal*/
-    public  ListaDoblementeEnlazada<E> ListaEliminandoConAñoAparicionYAfiliacionTal(ListaDoblementeEnlazada listaOriginal,int añoAparicion, String afiliacion){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConAñoAparicionYAfiliacionTal(Lista<E> listaOriginal,int añoAparicion, String afiliacion){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y raza tal*/
-    public  ListaDoblementeEnlazada<E> listaAñoAparicionYRazaTal(ListaDoblementeEnlazada listaOriginal,int añoAparicion, String raza){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConAñoAparicionYRazaTal(Lista<E> listaOriginal,int añoAparicion, String raza){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y origen tal*/
-    public ListaDoblementeEnlazada<E> listaAutorYOrigenTal(ListaDoblementeEnlazada listaOriginal,String autor, String origen){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public ListaDoblementeEnlazada<E> ListaEliminandoConAutorYOrigenTal(Lista<E> listaOriginal,String autor, String origen){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y comic tal*/
-    public  ListaDoblementeEnlazada<E> listaAutorYComicTal(ListaDoblementeEnlazada listaOriginal,String autor, String comic){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConAutorYComicTal(Lista<E> listaOriginal,String autor, String comic){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y afiliacion tal*/
-    public  ListaDoblementeEnlazada<E> listaAutorYAfiliacionTal(ListaDoblementeEnlazada listaOriginal,String autor, String afiliacion){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConAutorYAfiliacionTal(Lista<E> listaOriginal,String autor, String afiliacion){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y raza tal*/
-    public  ListaDoblementeEnlazada<E> listaAutorYRazaTal(ListaDoblementeEnlazada listaOriginal,String autor, String raza){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConAutorYRazaTal(Lista<E> listaOriginal,String autor, String raza){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con origen y comic tal*/
-    public  ListaDoblementeEnlazada<E> listaOrigenYComicTal(ListaDoblementeEnlazada listaOriginal,String origen, String comic){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConOrigenYComicTal(Lista<E> listaOriginal,String origen, String comic){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConOrigenTal(origen);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con origen y afiliacion tal*/
-    public  ListaDoblementeEnlazada<E> listaOrigenYAfiliacionTal(ListaDoblementeEnlazada listaOriginal,String origen, String afiliacion){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConOrigenYAfiliacionTal(Lista<E> listaOriginal,String origen, String afiliacion){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConOrigenTal(origen);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con origen y raza tal*/
-    public  ListaDoblementeEnlazada<E> listaOrigenYRazaTal(ListaDoblementeEnlazada listaOriginal,String origen, String raza){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConOrigenYRazaTal(Lista<E> listaOriginal,String origen, String raza){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConOrigenTal(origen);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con y afiliacion tal*/
-    public  ListaDoblementeEnlazada<E> listaComicYAfiliacionTal(ListaDoblementeEnlazada listaOriginal,String comic, String afiliacion){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConComicYAfiliacionTal(Lista<E> listaOriginal,String comic, String afiliacion){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConComicTal(comic);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con y raza tal*/
-    public  ListaDoblementeEnlazada<E> listaComicYRazaTal(ListaDoblementeEnlazada listaOriginal,String comic, String raza){
-         ListaDoblementeEnlazada<E> lista = listaOriginal;
+    public  ListaDoblementeEnlazada<E> ListaEliminandoConComicYRazaTal(Lista<E> listaOriginal,String comic, String raza){
+         ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
          lista.EliminarConComicTal(comic);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con afiliacion y raza tal*/
-    public ListaDoblementeEnlazada<E> EliminarAfiliacionYRazaTal(ListaDoblementeEnlazada listaOriginal,String afiliacion, String raza){
-        ListaDoblementeEnlazada<E> lista = new ListaDoblementeEnlazada();
+    public ListaDoblementeEnlazada<E> ListaEliminandoConAfiliacionYRazaTal(Lista<E> listaOriginal,String afiliacion, String raza){
+        ListaDoblementeEnlazada<E> lista = (ListaDoblementeEnlazada<E>)listaOriginal;
         lista.EliminarConAfiliacionTal(afiliacion); 
         lista.EliminarConRazaTal(raza);
         return lista;

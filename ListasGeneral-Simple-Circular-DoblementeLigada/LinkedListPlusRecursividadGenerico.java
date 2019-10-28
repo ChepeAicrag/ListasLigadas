@@ -484,7 +484,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
     
     /** Eliminar de la lista con nombre tal*/
-    public void EliminarConNombreTal(String nombreReal){
+    public void EliminarConNombreRealTal(String nombreReal){
       for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getNombreReal().split(","); 
                 for(int j = 0; j < temp.length; j++)
@@ -566,224 +566,224 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y poder tal*/
-    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYPoderTal(LinkedListPlusRecursividadGenerico listaOriginal,char sexo, String poder){
-        LinkedListPlusRecursividadGenerico<E> lista = listaOriginal; //Clonamos la lista  
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYPoderTal(Lista <E>  listaOriginal,char sexo, String poder){
+        LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal; //Clonamos la lista  
         lista.EliminarConSexoTal(sexo);
         lista.EliminarConPoderTal(poder);
         return lista; //Se retorna dicha lista clonada, ya con elementos eliminados
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y año tal*/
-    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYAñoAparicionTal(LinkedListPlusRecursividadGenerico listaOriginal,char sexo, int añoAparicion){
-        LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYAñoAparicionTal(Lista <E>  listaOriginal,char sexo, int añoAparicion){
+        LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
         lista.EliminarConSexoTal(sexo);
         lista.EliminarConAñoAparicionTal(añoAparicion);
         return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y autor tal*/
-    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYAutorTal(LinkedListPlusRecursividadGenerico listaOriginal,char sexo, String autor){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYAutorTal(Lista <E>  listaOriginal,char sexo, String autor){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConAutorTal(autor);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y origen tal*/
-    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYOrigenTal(LinkedListPlusRecursividadGenerico listaOriginal,char sexo, String origen){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYOrigenTal(Lista <E>  listaOriginal,char sexo, String origen){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y comic tal*/
-    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYComicTal(LinkedListPlusRecursividadGenerico listaOriginal,char sexo, String comic){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYComicTal(Lista <E>  listaOriginal,char sexo, String comic){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y afiliacion tal*/
-    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYAfiliacionTal(LinkedListPlusRecursividadGenerico listaOriginal,char sexo, String afiliacion){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYAfiliacionTal(Lista <E>  listaOriginal,char sexo, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y raza tal*/
-    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYRazaTal(LinkedListPlusRecursividadGenerico listaOriginal,char sexo, String raza){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYRazaTal(Lista <E>  listaOriginal,char sexo, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConSexoTal(sexo);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y año tal*/
-    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConPoderYAñoAparicionTal(LinkedListPlusRecursividadGenerico listaOriginal,String poder, int añoAparicion){
-        LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConPoderYAñoAparicionTal(Lista <E>  listaOriginal,String poder, int añoAparicion){
+        LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
         lista.EliminarConPoderTal(poder);
         lista.EliminarConAñoAparicionTal(añoAparicion);
         return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y autor tal*/
-    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConPoderYAutorTal(LinkedListPlusRecursividadGenerico listaOriginal,String poder, String autor){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConPoderYAutorTal(Lista <E>  listaOriginal,String poder, String autor){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConAutorTal(autor);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y origen tal*/
-    public LinkedListPlusRecursividadGenerico<E> ListaElimiandoConPoderYOrigenTal(LinkedListPlusRecursividadGenerico listaOriginal,String poder, String origen){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConPoderYOrigenTal(Lista <E>  listaOriginal,String poder, String origen){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y comic tal*/
-    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandConPoderYComicTal(LinkedListPlusRecursividadGenerico listaOriginal,String poder, String comic){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConPoderYComicTal(Lista <E>  listaOriginal,String poder, String comic){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y afiliacion tal*/
-    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConPoderYAfiliacionTal(LinkedListPlusRecursividadGenerico listaOriginal,String poder, String afiliacion){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConPoderYAfiliacionTal(Lista <E>  listaOriginal,String poder, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con poder y raza tal*/
-    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConPoderYRazaTal(LinkedListPlusRecursividadGenerico listaOriginal,String poder, String raza){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConPoderYRazaTal(Lista <E>  listaOriginal,String poder, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConPoderTal(poder);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y autor tal*/
-    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAñoAparicionYAutorTal(LinkedListPlusRecursividadGenerico listaOriginal,int añoAparicion, String autor){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAñoAparicionYAutorTal(Lista <E>  listaOriginal,int añoAparicion, String autor){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConAutorTal(autor);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y origen tal*/
-    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAñoAparicionYOrigenTal(LinkedListPlusRecursividadGenerico listaOriginal,int añoAparicion, String origen){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAñoAparicionYOrigenTal(Lista <E>  listaOriginal,int añoAparicion, String origen){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y comic tal*/
-    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAñoAparicionYComicTal(LinkedListPlusRecursividadGenerico listaOriginal,int añoAparicion, String comic){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAñoAparicionYComicTal(Lista <E>  listaOriginal,int añoAparicion, String comic){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y afiliacion tal*/
-    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAñoAparicionYAfiliacionTal(LinkedListPlusRecursividadGenerico listaOriginal,int añoAparicion, String afiliacion){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAñoAparicionYAfiliacionTal(Lista <E>  listaOriginal,int añoAparicion, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con año y raza tal*/
-    public  LinkedListPlusRecursividadGenerico<E> listaAñoAparicionYRazaTal(LinkedListPlusRecursividadGenerico listaOriginal,int añoAparicion, String raza){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAñoAparicionYRazaTal(Lista <E>  listaOriginal,int añoAparicion, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConAñoAparicionTal(añoAparicion);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y origen tal*/
-    public LinkedListPlusRecursividadGenerico<E> listaAutorYOrigenTal(LinkedListPlusRecursividadGenerico listaOriginal,String autor, String origen){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAutorYOrigenTal(Lista <E>  listaOriginal,String autor, String origen){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConOrigenTal(origen);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y comic tal*/
-    public  LinkedListPlusRecursividadGenerico<E> listaAutorYComicTal(LinkedListPlusRecursividadGenerico listaOriginal,String autor, String comic){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAutorYComicTal(Lista <E>  listaOriginal,String autor, String comic){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y afiliacion tal*/
-    public  LinkedListPlusRecursividadGenerico<E> listaAutorYAfiliacionTal(LinkedListPlusRecursividadGenerico listaOriginal,String autor, String afiliacion){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAutorYAfiliacionTal(Lista <E>  listaOriginal,String autor, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con autor y raza tal*/
-    public  LinkedListPlusRecursividadGenerico<E> listaAutorYRazaTal(LinkedListPlusRecursividadGenerico listaOriginal,String autor, String raza){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAutorYRazaTal(Lista <E>  listaOriginal,String autor, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConAutorTal(autor);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con origen y comic tal*/
-    public  LinkedListPlusRecursividadGenerico<E> listaOrigenYComicTal(LinkedListPlusRecursividadGenerico listaOriginal,String origen, String comic){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConOrigenYComicTal(Lista <E>  listaOriginal,String origen, String comic){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConOrigenTal(origen);
          lista.EliminarConComicTal(comic);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con origen y afiliacion tal*/
-    public  LinkedListPlusRecursividadGenerico<E> listaOrigenYAfiliacionTal(LinkedListPlusRecursividadGenerico listaOriginal,String origen, String afiliacion){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConOrigenYAfiliacionTal(Lista <E>  listaOriginal,String origen, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConOrigenTal(origen);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con origen y raza tal*/
-    public  LinkedListPlusRecursividadGenerico<E> listaOrigenYRazaTal(LinkedListPlusRecursividadGenerico listaOriginal,String origen, String raza){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConOrigenYRazaTal(Lista <E>  listaOriginal,String origen, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConOrigenTal(origen);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con y afiliacion tal*/
-    public  LinkedListPlusRecursividadGenerico<E> listaComicYAfiliacionTal(LinkedListPlusRecursividadGenerico listaOriginal,String comic, String afiliacion){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConComicYAfiliacionTal(Lista <E>  listaOriginal,String comic, String afiliacion){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConComicTal(comic);
          lista.EliminarConAfiliacionTal(afiliacion);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con y raza tal*/
-    public  LinkedListPlusRecursividadGenerico<E> listaComicYRazaTal(LinkedListPlusRecursividadGenerico listaOriginal,String comic, String raza){
-         LinkedListPlusRecursividadGenerico<E> lista = listaOriginal;
+    public  LinkedListPlusRecursividadGenerico<E> ListaEliminandoConComicYRazaTal(Lista <E>  listaOriginal,String comic, String raza){
+         LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
          lista.EliminarConComicTal(comic);
          lista.EliminarConRazaTal(raza);
          return lista;
     }
     
     /** Metodo terminado para obtener lista eliminando con afiliacion y raza tal*/
-    public LinkedListPlusRecursividadGenerico<E> EliminarAfiliacionYRazaTal(LinkedListPlusRecursividadGenerico listaOriginal,String afiliacion, String raza){
-        LinkedListPlusRecursividadGenerico<E> lista = new LinkedListPlusRecursividadGenerico();
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConAfiliacionYRazaTal(Lista <E>  listaOriginal,String afiliacion, String raza){
+        LinkedListPlusRecursividadGenerico<E> lista = (LinkedListPlusRecursividadGenerico<E>) listaOriginal;
         lista.EliminarConAfiliacionTal(afiliacion); 
         lista.EliminarConRazaTal(raza);
         return lista;

@@ -7,19 +7,17 @@ public class SuperHeroe implements Serializable
    private char sexo; //Metodo realizado
    private String poder; //Metodo realizado
    private int[] añoAparicion; //Metodo realizado
-   private String debilidad; //Metodo suspendido
-   private String autor; //Metodo realizado
+  private String autor; //Metodo realizado
    private String origen; // Metodo realiazdo
    private String comic; // Metodo realizado
    private String afiliacionActual; //Metodo realizado
    private String raza; //Metodo realizado
    
-   public SuperHeroe(String alias, String poder, char sexo, String debilidad, String autor, 
+   public SuperHeroe(String alias, String poder, char sexo, String autor, 
                      String nombreReal, String origen, String comic, String afiliacionActual, String raza, int... añoAparicion){
        this.alias            = alias;
        this.poder            = poder;
        this.sexo             = sexo;
-       this.debilidad        = debilidad;
        this.autor            = autor;
        this.nombreReal       = nombreReal;
        this.origen           = origen;
@@ -48,10 +46,6 @@ public class SuperHeroe implements Serializable
     
    public String getPoder(){
        return poder;
-    } 
-   
-   public String getDebilidad(){
-       return debilidad;
     } 
    
    public int[] getAñoAparicion(){
@@ -89,7 +83,7 @@ public class SuperHeroe implements Serializable
    public boolean equals(Object obj){
        SuperHeroe x = (SuperHeroe) obj;
        if(getAlias().equals(x.getAlias()) && getPoder().equals(x.getPoder()) 
-          && getSexo() == x.getSexo() && getDebilidad().equals(x.getDebilidad()))
+          && getSexo() == x.getSexo())
         return true;
        return false;
     } 
