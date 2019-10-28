@@ -83,18 +83,51 @@ public class SuperHeroe implements Serializable
       return s.substring(0,s.length()-1);      
     } 
     
-    public String toString(){
+   /** Metodo para comprobar los años */ 
+   private boolean añosIgual(int[] años){
+       int temp[] = getAñoAparicion();
+       if(años.length == temp.length){
+           Arrays.sort(temp);
+           Arrays.sort(años);
+           int cont = 0;
+           for(int i = 0; i < temp.length; i++)
+               if(años[i] == temp[i])
+                  cont++;
+           if(cont == temp.length)
+               return true;
+        }
+       return false; 
+    }
+   
+   private boolean poderIgual(String poderes){
+       String[] temp = getPoder().split(",");
+       String[] temp2 = poderes.split(",");
+       if(temp2.length == temp.length){
+           Arrays.sort(temp);
+           Arrays.sort(temp2);
+           int cont = 0;
+           for(int i = 0; i < temp.length; i++)
+                if(temp[i].equalsIgnoreCase(temp2[i]))
+                    cont++;
+           if(cont == temp.length)
+              return true;
+      }
+      return false;
+   }
+    
+   public String toString(){
        return "\r → ALIAS |" + getAlias() + "| \n NOMBRE REAL |" + getNombreReal() + "| \n CREADOR |" + getAutor() + "| \n ORIGEN |" + getOrigen() + "| \n SEXO |" + getSexo() + 
                "| \n AÑOS DE APARICION |" + años() + "| \n COMICS |" + getComic() + "| \n AFILIACIONES |" + getAfiliacionActual() + "| \n PODERES |" + getPoder() + "|\n" ;
     } 
     
-    /** modifica esto*/
+    /** Se puede hacer mas eficiente, aquí tengo la dud si puedo agregar metodos para hacerlo */
    public boolean equals(Object obj){
        SuperHeroe x = (SuperHeroe) obj;
-       if(getAlias().equals(x.getAlias()) && getPoder().equals(x.getPoder()) 
-          && getSexo() == x.getSexo() && getAñoAparicion().equals(x.getAñoAparicion()) && getOrigen().equals(x.getOrigen()) && getAfiliacionActual().equals(x.getAfiliacionActual()) 
-          && getAutor().equals(x.getAutor()) && getRaza().equals(x.getRaza()))
+       if(getAlias().equalsIgnoreCase(x.getAlias()) && poderIgual(x.getPoder()) 
+          && getSexo() == x.getSexo() && añosIgual(x.getAñoAparicion()) && getOrigen().equalsIgnoreCase(x.getOrigen()) && 
+          getAfiliacionActual().equalsIgnoreCase(x.getAfiliacionActual()) && getAutor().equals(x.getAutor()) && getRaza().equals(x.getRaza()))
         return true;
        return false;
     } 
+    
 }

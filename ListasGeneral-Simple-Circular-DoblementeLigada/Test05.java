@@ -9,7 +9,7 @@ public class Test05
        Archivito.LeerArchivo(Lista,"Heroes"); 
         
        /**Test de los metodos */
-           
+       
        StdOut.println("\n\" Aparecion en el año : 1962 : y su creador es Phil Jimenez\"");
         Lista.ListaAñoAparicionYAutorTal(1962,"Phil Jimenez").mostrarLista();
         

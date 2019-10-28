@@ -493,7 +493,20 @@ public class ListaDoblementeEnlazada<E> {
         }
         return buscado;
     }
-
+    
+    public void InvertirLista(E data){
+        Nodo left;
+        Nodo right;
+        left = cabeza;
+        right = fin;
+        while(left != right && left.anterior != right){
+            left.informacion = data;
+            right.informacion = data;
+            left = left.siguiente;
+            right = right.siguiente;
+        }
+    }
+    
     /** muestra los valores en la Lista */
     public void mostrar(Nodo n) {
         Nodo iterador = n;
