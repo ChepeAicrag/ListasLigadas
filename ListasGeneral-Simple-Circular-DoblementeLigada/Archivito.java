@@ -35,15 +35,14 @@ public class Archivito
         flujoArchivoEntrada = new FileInputStream(archivoSalida);
         flujoObjetoEntrada = new ObjectInputStream(flujoArchivoEntrada);
         Object per = flujoObjetoEntrada.readObject();   
-        if(lista.getClass().toString().equals("ListaCircular"))
-        StdOut.println("\n******** MOSTRANDO ARCHIVO *******");
+        //StdOut.println("\n******** MOSTRANDO ARCHIVO *******");
         while(per != null){
-             lista.insertarInicio(per);
-             System.out.print(((SuperHeroe)per).toString());
+             lista.insertarInicio((SuperHeroe)per);
+             //System.out.print(((SuperHeroe)per).toString());
              per = flujoObjetoEntrada.readObject();
          }    
        }catch(IOException error){
-            System.out.println("******** FIN DE ARCHIVO *******"); 
+            //System.out.println("******** FIN DE ARCHIVO *******"); 
     }finally{
             flujoArchivoEntrada.close();
             flujoObjetoEntrada.close();

@@ -1,14 +1,15 @@
 
 public interface Lista <E>{
     public void mostrarLista();
-    public E getInfoNodo(Nodo x);
     public boolean estaVacia();
     public void insertarInicio(E x);
     public void insertarFinal(E x);
-    public Nodo getCabeza();
-    public Nodo getFin();
     public void eliminarInicio();
     public void eliminarFinal();
+    public void Eliminar(E x);
+    public Nodo getCabeza();
+    public Nodo getFin();
+    public E getInfoNodo(Nodo x);
     public Nodo buscar(E dato);
     public void LlenarListaDesdeArchivo(String nom)throws Exception;
     public Lista <E> ListaAliasTal(String alias);
@@ -85,5 +86,4 @@ public interface Lista <E>{
     public Lista <E> ListaEliminandoConComicYAfiliacionTal(Lista <E> listaOriginal,String comic, String afiliacion);
     public Lista <E> ListaEliminandoConComicYRazaTal(Lista <E>  listaOriginal,String comic, String raza);
     public Lista <E> ListaEliminandoConAfiliacionYRazaTal(Lista <E>  listaOriginal,String afiliacion, String raza);  
-   
 }

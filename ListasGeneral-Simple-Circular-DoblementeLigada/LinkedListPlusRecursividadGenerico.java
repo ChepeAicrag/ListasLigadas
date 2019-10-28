@@ -79,10 +79,11 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     /** Si queremos la informacion del nodo que está despues */
     public E DespuesDeInfo(E x){
-        if(((SuperHeroe)getFin().getInformacion()).equals(x)) //Busco de que existe en la Lista y de que despues de él solo hay null
-            return (E) "Nadie eres el ultimo!!";        // Como no hay referencia, se tiene que comparar como objeto, por ello el casting
-        if(DespuesDe(x) == null && buscar(x) == null) //Si no se encuentra y es null, entonces no está en la Lista
-        return (E) "No está en la Lista";
+            if(!estaVacia())
+               if(((SuperHeroe)getFin().getInformacion()).equals(x)) //Busco de que existe en la Lista y de que despues de él solo hay null
+                   return (E) "Nadie eres el ultimo!!";        // Como no hay referencia, se tiene que comparar como objeto, por ello el casting
+            if(DespuesDe(x) == null && buscar(x) == null) //Si no se encuentra y es null, entonces no está en la Lista
+                 return (E) "No está en la Lista";
         return getInfoNodo(DespuesDe(x));   
     }
     

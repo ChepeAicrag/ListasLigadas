@@ -55,12 +55,13 @@ public class ListaCircular<E> implements Lista<E>{
         Nodo temp = head;
         if(temp == null)
            StdOut.println("Lista vacia!!");
-        else
+        else{
+            //StdOut.println("| ALIAS |\t | NOMBRE REAL |\t | CREADOR |\t | ORIGEN |\t | SEXO |\t | AÑO DE APARICION |\t | COMIC |\t | AFILIACION  |\t |     PODERES    |\t");
             do{
                 StdOut.println(temp.getInformacion());
                 temp = temp.getSiguiente();
             }while(temp != head);
-                   
+        }      
     }
     
     public boolean estaVacia(){

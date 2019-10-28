@@ -7,7 +7,7 @@ public class Test01
   public static void main()throws Exception{
        LinkedListPlusRecursividadGenerico <SuperHeroe >lista = new LinkedListPlusRecursividadGenerico();
        /**Muestra el archivo*/
-       Archivito.LeerArchivo(lista,"Heroes"); // Mostramos el archivo
+       Archivito.LeerArchivo(lista,"superheroes"); // Mostramos el archivo
        
          /**Test de los metodos */
         

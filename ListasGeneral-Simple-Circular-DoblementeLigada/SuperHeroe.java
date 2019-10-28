@@ -7,7 +7,7 @@ public class SuperHeroe implements Serializable
    private char sexo; //Metodo realizado
    private String poder; //Metodo realizado
    private int[] añoAparicion; //Metodo realizado
-  private String autor; //Metodo realizado
+   private String autor; //Metodo realizado
    private String origen; // Metodo realiazdo
    private String comic; // Metodo realizado
    private String afiliacionActual; //Metodo realizado
@@ -76,14 +76,24 @@ public class SuperHeroe implements Serializable
         return raza;
     }
    
-    public String toString(){
-       return " → " + getAlias() + "\n";
+   private String años(){
+      String s = "";
+       for(int i = 0; i < getAñoAparicion().length ; i++)
+            s += String.valueOf(getAñoAparicion()[i]) + ",";
+      return s.substring(0,s.length()-1);      
     } 
     
+    public String toString(){
+       return "\r → ALIAS |" + getAlias() + "| \n NOMBRE REAL |" + getNombreReal() + "| \n CREADOR |" + getAutor() + "| \n ORIGEN |" + getOrigen() + "| \n SEXO |" + getSexo() + 
+               "| \n AÑOS DE APARICION |" + años() + "| \n COMICS |" + getComic() + "| \n AFILIACIONES |" + getAfiliacionActual() + "| \n PODERES |" + getPoder() + "|\n" ;
+    } 
+    
+    /** modifica esto*/
    public boolean equals(Object obj){
        SuperHeroe x = (SuperHeroe) obj;
        if(getAlias().equals(x.getAlias()) && getPoder().equals(x.getPoder()) 
-          && getSexo() == x.getSexo())
+          && getSexo() == x.getSexo() && getAñoAparicion().equals(x.getAñoAparicion()) && getOrigen().equals(x.getOrigen()) && getAfiliacionActual().equals(x.getAfiliacionActual()) 
+          && getAutor().equals(x.getAutor()) && getRaza().equals(x.getRaza()))
         return true;
        return false;
     } 
