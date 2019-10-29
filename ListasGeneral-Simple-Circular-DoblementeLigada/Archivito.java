@@ -12,7 +12,7 @@ public class Archivito
       FileOutputStream flujoArchivoSalida = null;
       ObjectOutputStream flujoObjetoSalida = null;
         try{    
-            archivoSalida = new File(nom+".txt");
+            archivoSalida = new File(nom+".obj");
             flujoArchivoSalida = new FileOutputStream(archivoSalida);
             flujoObjetoSalida = new ObjectOutputStream(flujoArchivoSalida);
             for(int i = 0; i < CreacionSuperHeroes.llenarSuperHeroes().size(); i++){
@@ -31,7 +31,7 @@ public class Archivito
     ObjectInputStream flujoObjetoEntrada = null;
     FileInputStream flujoArchivoEntrada = null;
     try{
-        File archivoSalida = new File(nom+".txt");     
+        File archivoSalida = new File(nom+".obj");     
         flujoArchivoEntrada = new FileInputStream(archivoSalida);
         flujoObjetoEntrada = new ObjectInputStream(flujoArchivoEntrada);
         Object per = flujoObjetoEntrada.readObject();   

@@ -14,6 +14,38 @@ public class ListaCircular<E>{
     private Node head;
     private Node tail;
     
+    public Node eliminar(E dato){ 
+        if(head == null)
+            return head;
+        else{    
+           Node curr = head;
+           Node prev = new Node();
+           do{
+               if(curr.informacion.equals(dato))
+                  if(curr.siguiente == curr){
+                    head = null;
+                    return head;
+                   }else{
+                       if(curr == head){
+                           prev = head; // preve = curr
+                           do{
+                              prev = prev.siguiente;
+                              }while(prev != head);
+                           head = curr.siguiente;
+                           prev.siguiente = head;
+                        }else if(curr.siguiente == head){
+                                prev.siguiente = head;
+                        }else{
+                            prev.siguiente = curr.siguiente;
+                        }   
+                    }
+               prev = curr;
+               curr = curr.siguiente;
+            }while( curr != head);
+       }
+       return head;
+    }
+    
     public Node getHead(){
         return head;
     }
