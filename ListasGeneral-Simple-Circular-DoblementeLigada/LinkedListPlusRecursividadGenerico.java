@@ -179,7 +179,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getAlias().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(alias)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(alias).trim()))
                         Lista.insertarInicio(((E)(i.getInformacion())));
             }
         return Lista;
@@ -191,7 +191,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getNombreReal().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(nombreReal)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(nombreReal).trim()))
                         Lista.insertarInicio(((E)(i.getInformacion())));
             }
         return Lista;
@@ -203,7 +203,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getPoder().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(poder)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(poder).trim()))
                         Lista.insertarInicio(((E)(i.getInformacion())));
             }
         return Lista;
@@ -215,7 +215,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getAutor().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(autor)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(autor).trim()))
                         Lista.insertarInicio(((E)(i.getInformacion())));
             }
         return Lista;
@@ -227,7 +227,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getOrigen().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(origen)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(origen).trim()))
                         Lista.insertarInicio(((E)(i.getInformacion())));
             }
         return Lista;
@@ -239,7 +239,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getComic().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(comic)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(comic).trim()))
                         Lista.insertarInicio(((E)(i.getInformacion())));
             }
         return Lista;
@@ -251,7 +251,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getAfiliacionActual().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(afiliacion)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(afiliacion).trim()))
                         Lista.insertarInicio(((E)(i.getInformacion())));
             }
         return Lista;
@@ -263,7 +263,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getRaza().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(raza)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(raza).trim()))
                         Lista.insertarInicio(((E)(i.getInformacion())));
             }
         return Lista;
@@ -479,7 +479,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
       for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getAlias().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(alias)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(alias)))
                         Eliminar(((E)(i.getInformacion())));
             }
     }
@@ -489,7 +489,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
       for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getNombreReal().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(nombreReal)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(nombreReal)))
                         Eliminar(((E)(i.getInformacion())));
             }
     }
@@ -499,7 +499,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
       for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getPoder().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(poder)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(poder)))
                         Eliminar(((E)(i.getInformacion())));
             }
     }  
@@ -509,7 +509,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
        for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getAutor().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(autor)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(autor)))
                         Eliminar(((E)(i.getInformacion())));
             }
     }
@@ -518,7 +518,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
        for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getOrigen().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(origen)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(origen)))
                         Eliminar(((E)(i.getInformacion())));
             } 
     }
@@ -527,7 +527,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getComic().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(comic)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(comic)))
                         Eliminar(((E)(i.getInformacion())));
             }
     }
@@ -536,7 +536,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getAfiliacionActual().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(afiliacion)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(afiliacion)))
                         Eliminar(((E)(i.getInformacion())));
             }
     }
@@ -545,7 +545,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         for(Nodo i = raiz; i != null; i = i.getSiguiente()){
                 String [] temp = ((SuperHeroe)(i.getInformacion())).getRaza().split(","); 
                 for(int j = 0; j < temp.length; j++)
-                    if(cleanString(temp[j]).equalsIgnoreCase(cleanString(raza)))
+                    if(cleanString(temp[j]).trim().equalsIgnoreCase(cleanString(raza)))
                         Eliminar(((E)(i.getInformacion())));
             }
     }

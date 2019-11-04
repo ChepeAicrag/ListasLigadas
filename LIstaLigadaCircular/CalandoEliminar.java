@@ -8,8 +8,10 @@ public class CalandoEliminar
         lista.InsertarPrimero("c");
         lista.InsertarPrimero("d");
         lista.InsertarPrimero("e");
-        lista.ImprimirLista();
+        lista.RecorrerLista();
         StdOut.println("Ahora la cabeza es : " + lista.getInfoNode(lista.eliminar("e")));
+        lista.ImprimirLista();
+        StdOut.println("Ahora la cabeza es : " + lista.getInfoNode(lista.eliminar("a")));
         lista.ImprimirLista();
     }
 }

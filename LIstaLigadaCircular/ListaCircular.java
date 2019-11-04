@@ -13,7 +13,7 @@ public class ListaCircular<E>{
     
     private Node head;
     private Node tail;
-    
+        
     public Node eliminar(E dato){ 
         if(head == null)
             return head;
@@ -27,10 +27,7 @@ public class ListaCircular<E>{
                     return head;
                    }else{
                        if(curr == head){
-                           prev = head; // preve = curr
-                           do{
-                              prev = prev.siguiente;
-                              }while(prev != head);
+                           for(prev = head; prev.siguiente != head; prev = prev.siguiente){}
                            head = curr.siguiente;
                            prev.siguiente = head;
                         }else if(curr.siguiente == head){
