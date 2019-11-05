@@ -120,7 +120,6 @@ public class SuperHeroe implements Serializable
                "| \n AÑOS DE APARICION |" + años() + "| \n COMICS |" + getComic() + "| \n AFILIACIONES |" + getAfiliacionActual() + "| \n PODERES |" + getPoder() + "|\n" ;
     } 
     
-    /** Se puede hacer mas eficiente, aquí tengo la dud si puedo agregar metodos para hacerlo */
    public boolean equals(Object obj){
        SuperHeroe x = (SuperHeroe) obj;
        if(getAlias().equalsIgnoreCase(x.getAlias()) && poderIgual(x.getPoder()) 

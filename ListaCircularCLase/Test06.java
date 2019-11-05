@@ -15,7 +15,7 @@ public class Test06
         StdOut.println("Eliminando al elemento \" b \" ");
         Lista.ImprimirLista(Lista.eliminar("b"));
         
-         StdOut.println("Voliendo a eliminar al elemento \" b \"");
+         StdOut.println("Volviendo a eliminar al elemento \" b \"");
         Lista.ImprimirLista(Lista.eliminar("b"));
     }
 }
