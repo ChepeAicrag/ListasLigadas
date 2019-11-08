@@ -1,20 +1,32 @@
 
+/**
+ * Clase de una Lista Circular (LC)
+   */
+
 import java.text.Normalizer;
 public class ListaCircular<E> implements Lista<E>{
     private Nodo head;
     private Nodo tail;
     
+    /** Constructor que crea una LC vacia. */
+    
     public ListaCircular(){
         head = null;
     }
+    
+    /** Método que retorna el primer nodo de la lista (cabeza) */
     
     public Nodo getCabeza(){
         return head;
     }
     
+    /** Método que retorna el ultimo nodo de la lista (fin) */
+    
     public Nodo getFin(){
         return tail;
     }
+    
+    /** Método que retorna información de un nodo */
     
     public E getInfoNodo(Nodo x){
         if(x != null)
@@ -23,6 +35,8 @@ public class ListaCircular<E> implements Lista<E>{
     }
     
     public void LlenarListaDesdeArchivo(String nom)throws Exception{}
+    
+    /** Insertar un nuevo nodo al inicio de la Lista */
     
     public void insertarInicio(E dato){
       if(estaVacia()){
@@ -39,6 +53,8 @@ public class ListaCircular<E> implements Lista<E>{
          }
     }
     
+    /** Insertar un nuevo nodo al final de la Lista */
+    
     public void insertarFinal(E dato){
       if(estaVacia())
          insertarInicio(dato); //Lo mismo que agregar al inicio
@@ -50,6 +66,8 @@ public class ListaCircular<E> implements Lista<E>{
            tail = x;
         }
     }
+    
+    /** Método que muestra la lista, comenzando en la cabeza */
     
     public void mostrarLista(){  
         Nodo temp = head;

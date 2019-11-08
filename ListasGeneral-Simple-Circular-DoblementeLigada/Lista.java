@@ -1,4 +1,10 @@
 
+/**
+ * 
+ * Interface, para que todas las listas tengan los métodos y para facilitar el uso al momento de llenar la lista desde archivo.
+ * 
+   */
+
 public interface Lista <E>{
     public void mostrarLista();
     public boolean estaVacia();

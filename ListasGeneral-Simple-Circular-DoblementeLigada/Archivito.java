@@ -1,13 +1,17 @@
 
 /**
- * Clase para crear un archivo y llenar una lista con archivo 
-   
+ * 
+ * Clase para utilizar el archivo de superheroes
+ * 
+ * 
    */
 import java.io.*;
-public class Archivito
-{
-    public static void LlenarArchivo(String nom) throws Exception{
-      Object superheroe=null; 
+public class Archivito{
+    
+  /** Método utilizado para crear y llenar un arhivo .obj con superheroes */
+    
+  public static void LlenarArchivo(String nom) throws Exception{
+      Object superheroe = null; 
       File archivoSalida;
       FileOutputStream flujoArchivoSalida = null;
       ObjectOutputStream flujoObjetoSalida = null;
@@ -27,7 +31,10 @@ public class Archivito
             flujoArchivoSalida.close();
         }  
   }
- public static void LeerArchivo(Lista lista,String nom) throws Exception{
+  
+  /** Método utilizado para llenar una lista desde un archivo */
+  
+  public static void LeerArchivo(Lista lista,String nom) throws Exception{
     ObjectInputStream flujoObjetoEntrada = null;
     FileInputStream flujoArchivoEntrada = null;
     try{
