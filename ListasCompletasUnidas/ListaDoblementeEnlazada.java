@@ -41,7 +41,10 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
     /** Método que muestra la lista, comenzando en la cabeza */
     
     public void mostrarLista(){
-        mostrar(cabeza);
+        if(estaVacia())
+            StdOut.println("\n\nLa lista está vacia");
+        else
+            mostrar(cabeza);
     }
     
     /** Método que retorna el nodo anterior al que estamos buscando */
@@ -130,7 +133,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         else{
            if(buscar(x) == fin)
                 eliminarFinal();
-           if(buscar(x) == cabeza)
+           else if(buscar(x) == cabeza)
                 eliminarInicio();
            else{
                Nodo temp = buscar(x).getAnterior();
@@ -179,7 +182,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ObjectInputStream flujoObjetoEntrada = null;
         FileInputStream flujoArchivoEntrada = null;
         try{
-            File archivoSalida = new File(nom+".txt");     
+            File archivoSalida = new File(nom+".obj");     
             flujoArchivoEntrada = new FileInputStream(archivoSalida);
             flujoObjetoEntrada = new ObjectInputStream(flujoArchivoEntrada);
             Object per = flujoObjetoEntrada.readObject();  
@@ -379,7 +382,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo); //Te entrega una Lista de sexo tal 
-            Lista.ListaPoderTal(poder); //Te regresa quienes tienen el poder, sobre esa misma Lista
+            Lista = Lista.ListaPoderTal(poder); //Te regresa quienes tienen el poder, sobre esa misma Lista
         }else
             StdOut.println("Se retornara una lista vacia");  
         return Lista;    
@@ -391,7 +394,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaAñoAparicionTal(añoAparicion);
+            Lista = Lista.ListaAñoAparicionTal(añoAparicion);
         }else
             StdOut.println("Se retornara una lista vacia");
         return Lista;
@@ -403,7 +406,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaAutorTal(autor);
+            Lista = Lista.ListaAutorTal(autor);
         }else
             StdOut.println("Se retornara una lista vacia");
         return Lista; 
@@ -415,7 +418,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaOrigenTal(origen);
+            Lista = Lista.ListaOrigenTal(origen);
         }else
             StdOut.println("Se retornara una lista vacia");
         return Lista;
@@ -427,7 +430,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaComicTal(comic);
+            Lista = Lista.ListaComicTal(comic);
         }else
             StdOut.println("Se retornara una lista vacia");
         return Lista;
@@ -439,7 +442,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia");    
         return Lista; 
@@ -451,7 +454,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia");     
         return Lista;
@@ -463,7 +466,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaAñoAparicionTal(añoAparicion);
+            Lista = Lista.ListaAñoAparicionTal(añoAparicion);
         }else
             StdOut.println("Se retornara una lista vacia");     
         return Lista;
@@ -475,7 +478,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaAutorTal(autor);
+            Lista = Lista.ListaAutorTal(autor);
         }else
             StdOut.println("Se retornara una lista vacia");       
         return Lista;
@@ -487,7 +490,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaOrigenTal(origen);
+            Lista = Lista.ListaOrigenTal(origen);
         }else
             StdOut.println("Se retornara una lista vacia");    
         return Lista;
@@ -499,7 +502,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaComicTal(comic);
+            Lista = Lista.ListaComicTal(comic);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -511,7 +514,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;    
@@ -523,7 +526,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -535,7 +538,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaAñoAparicionTal(añoAparicion);
-            Lista.ListaAutorTal(autor);
+            Lista = Lista.ListaAutorTal(autor);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -547,7 +550,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaAñoAparicionTal(añoAparicion);
-            Lista.ListaOrigenTal(origen);
+            Lista = Lista.ListaOrigenTal(origen);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -559,7 +562,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaAñoAparicionTal(añoAparicion);
-            Lista.ListaComicTal(comic);
+            Lista = Lista.ListaComicTal(comic);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -571,7 +574,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaAñoAparicionTal(añoAparicion);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;  
@@ -583,7 +586,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaAñoAparicionTal(añoAparicion);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -595,7 +598,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaAutorTal(autor);
-            Lista.ListaOrigenTal(origen);
+            Lista = Lista.ListaOrigenTal(origen);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -607,7 +610,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaAutorTal(autor);
-            Lista.ListaComicTal(comic);
+            Lista = Lista.ListaComicTal(comic);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -619,7 +622,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = new ListaDoblementeEnlazada();
         if(!estaVacia()){
             Lista = ListaAutorTal(autor);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -631,7 +634,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = ListaAutorTal(autor);
         if(!estaVacia()){
             Lista = ListaAutorTal(autor);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -643,7 +646,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = ListaOrigenTal(origen);
         if(!estaVacia()){
             Lista = ListaOrigenTal(origen);
-            Lista.ListaComicTal(comic);
+            Lista = Lista.ListaComicTal(comic);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -655,7 +658,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = ListaOrigenTal(origen);
         if(!estaVacia()){
             Lista = ListaOrigenTal(origen);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -667,7 +670,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = ListaOrigenTal(origen);
         if(!estaVacia()){
             Lista = ListaOrigenTal(origen);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -679,7 +682,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = ListaComicTal(comic);
         if(!estaVacia()){
             Lista = ListaComicTal(comic);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -691,7 +694,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = ListaComicTal(comic);
         if(!estaVacia()){
             Lista = ListaComicTal(comic);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -703,7 +706,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
         ListaDoblementeEnlazada<E> Lista = ListaAfiliacionTal(afiliacion);
         if(!estaVacia()){
             Lista = ListaAfiliacionTal(afiliacion);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 

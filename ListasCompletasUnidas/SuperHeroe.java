@@ -120,7 +120,7 @@ public class SuperHeroe implements Serializable
     
    public String toString(){
        return "\r → ALIAS |" + getAlias() + "| \n NOMBRE REAL |" + getNombreReal() + "| \n CREADOR |" + getAutor() + "| \n ORIGEN |" + getOrigen() + "| \n SEXO |" + getSexo() + 
-               "| \n AÑOS DE APARICION |" + años() + "| \n COMICS |" + getComic() + "| \n AFILIACIONES |" + getAfiliacionActual() + "| \n PODERES |" + getPoder() + "|\n" ;
+               "| \n AÑOS DE APARICION |" + años() + "| \n COMICS |" + getComic() + "| \n AFILIACIONES |" + getAfiliacionActual() + "| \n RAZA |" + getRaza() + "| \n PODERES |" + getPoder() + "|\n" ;
     } 
     
    public boolean equals(Object obj){

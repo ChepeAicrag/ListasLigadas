@@ -15,7 +15,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         ObjectInputStream flujoObjetoEntrada = null;
         FileInputStream flujoArchivoEntrada = null;
         try{
-            File archivoSalida = new File(nom+".txt");     
+            File archivoSalida = new File(nom+".obj");     
             flujoArchivoEntrada = new FileInputStream(archivoSalida);
             flujoObjetoEntrada = new ObjectInputStream(flujoArchivoEntrada);
             Object per = flujoObjetoEntrada.readObject();  
@@ -141,9 +141,9 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     public void eliminarFinal(){
         if(!estaVacia()){
-        Nodo temp = AntesDe((E)getFin().getInformacion());
-        temp.setSiguiente(temp.getSiguiente().getSiguiente());
-      }
+            Nodo temp = AntesDe((E)getFin().getInformacion());
+            temp.setSiguiente(temp.getSiguiente().getSiguiente());
+        }
     }
     
     /** Elimina el nodo del frente de la Lista */
@@ -202,7 +202,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
    
     public LinkedListPlusRecursividadGenerico<E> ListaAliasTal(String alias){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
-        if(!estaVacia())
+        if(estaVacia())
             StdOut.println("Se retornara una lista vacia");
         else    
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -218,7 +218,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     public LinkedListPlusRecursividadGenerico<E> ListaNombreRealTal(String nombreReal){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
-        if(!estaVacia())
+        if(estaVacia())
             StdOut.println("Se retornara una lista vacia");
         else 
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -234,7 +234,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     public LinkedListPlusRecursividadGenerico<E> ListaPoderTal(String poder){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
-        if(!estaVacia())
+        if(estaVacia())
             StdOut.println("Se retornara una lista vacia");
         else 
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -250,7 +250,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     public LinkedListPlusRecursividadGenerico<E> ListaAutorTal(String autor){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
-        if(!estaVacia())
+        if(estaVacia())
             StdOut.println("Se retornara una lista vacia");
         else 
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -266,7 +266,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     public LinkedListPlusRecursividadGenerico<E> ListaOrigenTal(String origen){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
-        if(!estaVacia())
+        if(estaVacia())
             StdOut.println("Se retornara una lista vacia");
         else 
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -282,7 +282,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     public LinkedListPlusRecursividadGenerico<E> ListaComicTal(String comic){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
-        if(!estaVacia())
+        if(estaVacia())
             StdOut.println("Se retornara una lista vacia");
         else 
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -298,7 +298,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     public LinkedListPlusRecursividadGenerico<E> ListaAfiliacionTal(String afiliacion){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
-        if(!estaVacia())
+        if(estaVacia())
             StdOut.println("Se retornara una lista vacia");
         else 
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -314,7 +314,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     public LinkedListPlusRecursividadGenerico<E> ListaRazaTal(String raza){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
-        if(!estaVacia())
+        if(estaVacia())
             StdOut.println("Se retornara una lista vacia");
         else 
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -338,7 +338,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     public LinkedListPlusRecursividadGenerico<E> ListaSexoTal(char sexo){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
-        if(!estaVacia())
+        if(estaVacia())
             StdOut.println("Se retornara una lista vacia");
         else 
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -352,7 +352,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     
     public LinkedListPlusRecursividadGenerico<E> ListaAñoAparicionTal(int añoAparicion){
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
-        if(!estaVacia())
+        if(estaVacia())
             StdOut.println("Se retornara una lista vacia");
         else 
             for(Nodo i = raiz; i != null; i = i.getSiguiente()){
@@ -376,7 +376,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo); //Te entrega una Lista de sexo tal 
-            Lista.ListaPoderTal(poder);
+            Lista = Lista.ListaPoderTal(poder);
         }else
             StdOut.println("Se retornara una lista vacia");
         return Lista; //Te regresa quienes tienen el poder, sobre esa misma Lista
@@ -388,7 +388,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaAñoAparicionTal(añoAparicion);
+            Lista = Lista.ListaAñoAparicionTal(añoAparicion);
         }else
             StdOut.println("Se retornara una lista vacia");
         return Lista;
@@ -400,7 +400,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaAutorTal(autor);
+            Lista = Lista.ListaAutorTal(autor);
         }else
             StdOut.println("Se retornara una lista vacia");
         return Lista;
@@ -412,7 +412,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaOrigenTal(origen);
+            Lista = Lista.ListaOrigenTal(origen);
         }else
             StdOut.println("Se retornara una lista vacia");
         return Lista;
@@ -424,7 +424,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
          if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaComicTal(comic);
+            Lista = Lista.ListaComicTal(comic);
         }else
             StdOut.println("Se retornara una lista vacia");
         return Lista;
@@ -436,7 +436,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia");    
         return Lista; 
@@ -448,7 +448,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaSexoTal(sexo);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia");     
         return Lista;
@@ -460,7 +460,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaAñoAparicionTal(añoAparicion);
+            Lista = Lista.ListaAñoAparicionTal(añoAparicion);
         }else
             StdOut.println("Se retornara una lista vacia");     
         return Lista;
@@ -472,7 +472,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaAutorTal(autor);
+            Lista = Lista.ListaAutorTal(autor);
         }else
             StdOut.println("Se retornara una lista vacia");       
         return Lista;
@@ -484,7 +484,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaOrigenTal(origen);
+            Lista = Lista.ListaOrigenTal(origen);
         }else
             StdOut.println("Se retornara una lista vacia");    
         return Lista;
@@ -496,7 +496,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaComicTal(comic);
+            Lista = Lista.ListaComicTal(comic);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -508,7 +508,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
          if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;  
@@ -520,7 +520,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = new LinkedListPlusRecursividadGenerico();
         if(!estaVacia()){
             Lista = ListaPoderTal(poder);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -532,7 +532,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaAñoAparicionTal(añoAparicion);
         if(!estaVacia()){
             Lista = ListaAñoAparicionTal(añoAparicion);
-            Lista.ListaAutorTal(autor);
+            Lista = Lista.ListaAutorTal(autor);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -544,7 +544,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaAñoAparicionTal(añoAparicion);
         if(!estaVacia()){
             Lista = ListaAñoAparicionTal(añoAparicion);
-            Lista.ListaOrigenTal(origen);
+            Lista = Lista.ListaOrigenTal(origen);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -556,7 +556,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaAñoAparicionTal(añoAparicion);
         if(!estaVacia()){
             Lista = ListaAñoAparicionTal(añoAparicion);
-            Lista.ListaComicTal(comic);
+            Lista = Lista.ListaComicTal(comic);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;  
@@ -568,7 +568,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaAñoAparicionTal(añoAparicion);
         if(!estaVacia()){
             Lista = ListaAñoAparicionTal(añoAparicion);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;  
@@ -580,7 +580,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaAñoAparicionTal(añoAparicion);
         if(!estaVacia()){
             Lista = ListaAñoAparicionTal(añoAparicion);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;  
@@ -592,7 +592,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaAutorTal(autor);
         if(!estaVacia()){
             Lista = ListaAutorTal(autor);
-            Lista.ListaOrigenTal(origen);
+            Lista = Lista.ListaOrigenTal(origen);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -604,7 +604,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaAutorTal(autor);
         if(!estaVacia()){
             Lista = ListaAutorTal(autor);
-            Lista.ListaComicTal(comic);
+            Lista = Lista.ListaComicTal(comic);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -616,7 +616,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaAutorTal(autor);
         if(!estaVacia()){
             Lista = ListaAutorTal(autor);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;  
@@ -628,7 +628,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaAutorTal(autor);
         if(!estaVacia()){
             Lista = ListaAutorTal(autor);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;
@@ -640,7 +640,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaOrigenTal(origen);
         if(!estaVacia()){
             Lista = ListaOrigenTal(origen);
-            Lista.ListaComicTal(comic);
+            Lista = Lista.ListaComicTal(comic);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -652,7 +652,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaOrigenTal(origen);
         if(!estaVacia()){
             Lista = ListaOrigenTal(origen);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -663,7 +663,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaOrigenTal(origen);
         if(!estaVacia()){
             Lista = ListaOrigenTal(origen);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -675,7 +675,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaComicTal(comic);
         if(!estaVacia()){
             Lista = ListaComicTal(comic);
-            Lista.ListaAfiliacionTal(afiliacion);
+            Lista = Lista.ListaAfiliacionTal(afiliacion);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 
@@ -687,7 +687,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaComicTal(comic);
         if(!estaVacia()){
             Lista = ListaComicTal(comic);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista;    
@@ -699,7 +699,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
         LinkedListPlusRecursividadGenerico<E> Lista = ListaAfiliacionTal(afiliacion);
         if(!estaVacia()){
             Lista = ListaAfiliacionTal(afiliacion);
-            Lista.ListaRazaTal(raza);
+            Lista = Lista.ListaRazaTal(raza);
         }else
             StdOut.println("Se retornara una lista vacia"); 
         return Lista; 

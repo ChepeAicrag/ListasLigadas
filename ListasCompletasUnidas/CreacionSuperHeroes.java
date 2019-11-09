@@ -15,11 +15,6 @@ public class CreacionSuperHeroes
        
         SuperHeroe demon       = new SuperHeroe("Demon","Atributos físicos y poderes sensoriales sobrehumanos,Capacidad de regeneración, Poderes mágicos,Precognición,Telepatía,Inmortalidad,Puede lanzar llamas de fuego místico,Vuelo",
                 'H',"Jack Kirby","Jason Blood","Gotham City","The Demon","Liga de la Justicia Oscura","Demonio",1972); 
-        SuperHeroe demon2       = new SuperHeroe("Demon2","Atributos físicos y poderes sensoriales sobrehumanos,Capacidad de regeneración, Poderes mágicos,Precognición,Telepatía,Inmortalidad,Puede lanzar llamas de fuego místico,Vuelo",
-                'H',"Jack Kirby","Jason Blood","Gotham City","The Demon","Liga de la Justicia Oscura","Demonio",1972); 
-        SuperHeroe superwoman2  = new SuperHeroe("Superwoman2","Capacidad de regeneración,Transformar energia,Absorción de Energía Solar,Super Fuerza,Invulnerabilidad,Super Velocidad,Vuelo,Visión de Calor,Visión Aumentada",
-                'M',"Phil Jimenez","Lois Lane,Luma Lynai,Diana (Tierra-3),Kristin Wells,Dana Dearden,Lucy Lane,Lana Lang","Tierra-11",
-                "Action Comics,Justice League of America,Miracle Monday,Adventures of Superman,Supergirl,Superwoman","Liga de la Justicia","Superhumana",1943,1962,1964,2009,2016);
         SuperHeroe deadman     = new SuperHeroe("Deadman","Invisibilidad,Vuelo,Intangibilidad,Puede poseer a cualquier ser vivo y controlarlo completamente",
                 'H',"Arnold Drake","Boston Brand","acróbata de circo ","Strange Adventures","Liga de la Justicia Oscura, Circo Haly, Black Lanterns Corps, White Lanterns Corps","Fantasma",1967);
         SuperHeroe adamStrange = new SuperHeroe("Adam Strange","Equipamiento: mochila propulsora espacial que le permite tener vuelo controlado y viajes interestelares; armas energéticas; generador de equipamiento de luz sólida; equipo para visualizar el espectro electromagnético.",
@@ -48,18 +43,18 @@ public class CreacionSuperHeroes
            */
         
         SuperHeroe superman = new SuperHeroe("El hombre de acero, El hombre del mañana, La maravilla de Metrópolis, El último hijo de Krypton, Gangbuster, Superboy, La Mancha (en Smallville)", "Súper fuerza,Súper velocidad,Vuelo.Invulnerabilidad casi total,Súper oído,Visión telescópica y microscópica.Visión de rayos-x,Aliento helado,Visión calorífica,Visión infra roja,Visión espectro magnética,Factor de curación acelerada,Longevidad"
-                , 'H', "Jerry Siegel, Joe Shuster", "Kal-El,Clark Joseph Kent", "Tierra,Krypton","Action Comics,", "Liga de la Justicia", "Kryptoniano,Humano", 1938);
+                , 'H', "Jerry Siegel, Joe Shuster", "Kal-El,Clark Joseph Kent", "Tierra,Krypton","Action Comics,", "Liga de la Justicia", "Kriptoniano,Humano", 1938);
         SuperHeroe superwoman  = new SuperHeroe("Superwoman","Capacidad de regeneración,Transformar energia,Absorción de Energía Solar,Super Fuerza,Invulnerabilidad,Super Velocidad,Vuelo,Visión de Calor,Visión Aumentada",
                 'M',"Phil Jimenez","Lois Lane,Luma Lynai,Diana (Tierra-3),Kristin Wells,Dana Dearden,Lucy Lane,Lana Lang","Tierra-11",
-                "Action Comics,Justice League of America,Miracle Monday,Adventures of Superman,Supergirl,Superwoman","Liga de la Justicia","Superhumana",1943,1962,1964 ,2009 ,2016);
-        SuperHeroe superboy = new SuperHeroe("Superboy", "Los poderes de Superman, en menor nivel, tales como: Superfuerza, Super Velocidad, Vuelo, Invulnerabilidad, Factor Curativo, Visión Rayos X, Superoído, Visión Calórica, Aliento gélido, Telequinesia, Reflejos Aumentados", 'M'
+                "Action Comics,Justice League of America,Miracle Monday,Adventures of Superman,Supergirl,Superwoman","Liga de la Justicia","Kriptoniano,Superhumana",1943,1962,1964 ,2009 ,2016);
+        SuperHeroe superboy = new SuperHeroe("Superboy", "Los poderes de Superman, en menor nivel, tales como: Superfuerza, Super Velocidad, Vuelo, Invulnerabilidad, Factor Curativo, Visión Rayos X, Superoído, Visión Calórica, Aliento gélido, Telequinesia, Reflejos Aumentados", 'H'
                 , "Jerry Siegel", "Conner Kent,Kon-El", "Estados Unidos,Krypton", "More Fun Comics", "Justicia joven, Familia Superman, Titanes", "Kriptoniano,Humano",1945,1949);
         SuperHeroe darkseid = new SuperHeroe("Jefe del lado oscuro","Inmortalidad,Atributos físicos sobrehumanos,Intelecto sobrehumano,Efecto Omega y manipulación de la Energía,Omnipotencia,Teletransportación",'H'
                 ,"Jack Kirby",""," Apokolips","Superman's Pal Jimmy Olsen","Sociedad Secreta de Súper Villanos","Apokolipniano",1970,1971);
         SuperHeroe lexLuthor = new SuperHeroe("Lex","Extremadamente inteligente, inmensos recursos financieros y armamentísticos, uso ocasional de una armadura robótica",'H'
                 ,"Jerome Siegel,Joe Shuster","Alexander Joseph Lex Luthor","Estados Unidos","Action Comics","LexCorp","Humano",1940);
-        SuperHeroe krypto = new SuperHeroe("Krypto el Superperro", "Vuelo, super-fuerza, super-visión, super-audición, super-velocidad, invulnerabilidad", 'M', "Otto Binder,Curt Swan", "Krypto", "Tierra,Krypton", "Adventure Comics", "Legión de Super-Mascotas", "Kriptoniano", 1955);
-        SuperHeroe brainiac = new SuperHeroe("Milton Fine", "Acceso a avanzada tecnología extraterrestre, altísima inteligencia, telepatía, telekinesis, control mental", 'M', "Otto Binder,Al Plastino", "Vril Dox", "", "Action Comics ", "Legion del Mal", "Humanoide, Android", 1958);
+        SuperHeroe krypto = new SuperHeroe("Krypto el Superperro", "Vuelo, super-fuerza, super-visión, super-audición, super-velocidad, invulnerabilidad", 'H', "Otto Binder,Curt Swan", "Krypto", "Tierra,Krypton", "Adventure Comics", "Legión de Super-Mascotas", "Kriptoniano", 1955);
+        SuperHeroe brainiac = new SuperHeroe("Milton Fine", "Acceso a avanzada tecnología extraterrestre, altísima inteligencia, telepatía, telekinesis, control mental", 'H', "Otto Binder,Al Plastino", "Vril Dox", "", "Action Comics ", "Legion del Mal", "Humanoide, Android", 1958);
         SuperHeroe powerGirl = new SuperHeroe("Karen Starr, Kara of Atlantis, Power Woman", "Volar, fuerza sobrehumana, visión de rayos X, microscópica, telescópica, calorífica, invulnerabilidad, super velocidad, super oído, super aliento",'M'
                 ,"Gerry Conway,Wally Wood","Kara Zor-El", "Krypton, Tierra","All Star Comics","Sociedad de la Justicia de América , Estrellas de la Sociedad de la Justicia de América","Kryptoniano",1976);
         SuperHeroe streaky = new  SuperHeroe("El supergato", "vuelo, super-fuerza,super-visión,super-velocidad,invulnerabilidad", 'H', "Otto Binder,Jim Mooney", "Streaky, the Supercat", "Krypton", "Action Comics ", "Legión de Super-Mascotas", "Felis silvestris catus (gato)",1960);
@@ -138,9 +133,7 @@ public class CreacionSuperHeroes
         /** Agregando a cada SuperHeroe al vector para guardar al archivo .obj*/
                 
         SuperHeroes.add(demon);
-        SuperHeroes.add(demon2);
         SuperHeroes.add(superwoman);
-        SuperHeroes.add(superwoman2);
         SuperHeroes.add(deadman);
         SuperHeroes.add(adamStrange);
         SuperHeroes.add(starfire);
