@@ -245,8 +245,8 @@ public class LinkedListPlusRecursividadGenerico<E>{
     }
     
     /** Metodo terminado para obtener lista eliminando con sexo y poder tal*/
-    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYPoderTal(LinkedListPlusRecursividadGenerico listaOriginal,char sexo, String poder){
-        LinkedListPlusRecursividadGenerico<E> lista = listaOriginal; //Clonamos la lista  
+    public LinkedListPlusRecursividadGenerico<E> ListaEliminandoConSexoYPoderTal(char sexo, String poder){
+        LinkedListPlusRecursividadGenerico<E> lista = this; //Clonamos la lista  
         lista.EliminarConSexoTal(sexo);
         lista.EliminarConPoderTal(poder);
         return lista; //Se retorna dicha lista clonada, ya con elementos eliminados
