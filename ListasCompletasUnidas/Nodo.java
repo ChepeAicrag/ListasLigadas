@@ -1,13 +1,16 @@
 
 public class Nodo<E>{
+    
     private E informacion;
     private Nodo siguiente;
     private Nodo anterior;
+    
      public Nodo(){
         this. informacion = null;
         this. siguiente   = null;
         this. anterior    = null;
     }
+    
     public void setAnterior(Nodo anterior){
         this.anterior = anterior;
     }

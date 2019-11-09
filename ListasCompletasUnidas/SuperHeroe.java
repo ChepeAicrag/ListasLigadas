@@ -83,7 +83,8 @@ public class SuperHeroe implements Serializable
       return s.substring(0,s.length()-1);      
     } 
     
-   /** Metodo para comprobar los años */ 
+   /** Método para comprobar los años */ 
+   
    private boolean añosIgual(int[] años){
        int temp[] = getAñoAparicion();
        if(años.length == temp.length){
@@ -98,6 +99,8 @@ public class SuperHeroe implements Serializable
         }
        return false; 
     }
+   
+   /** Método para comprobar los poderes */ 
    
    private boolean poderIgual(String poderes){
        String[] temp = getPoder().split(",");

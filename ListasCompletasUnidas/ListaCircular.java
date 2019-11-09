@@ -189,7 +189,6 @@ public class ListaCircular<E> implements Lista<E>{
                         Lista.insertarInicio(((E)(i.getInformacion())));
                 i = i.getSiguiente();
             }while(i != head);
-            
         return Lista;
     }
     
@@ -451,7 +450,7 @@ public class ListaCircular<E> implements Lista<E>{
         return Lista;
     }
     
-        /** Método para buscar por poder y año tal */
+    /** Método para buscar por poder y año tal */
         
     public ListaCircular<E> ListaPoderYAñoAparicionTal(String poder, int añoAparicion){
         ListaCircular<E> Lista = new ListaCircular();
@@ -866,6 +865,12 @@ public class ListaCircular<E> implements Lista<E>{
             StdOut.println("La lista está vacia, no se puede eliminar");    
     }
     
+    /**
+     * 
+     * Metodos para eliminar por dos diferentes atributos (Filtrado)
+     * 
+       */
+    
     /** Método para obtener lista eliminando con sexo y poder tal */
     
     public ListaCircular<E> ListaEliminandoConSexoYPoderTal(Lista <E> listaOriginal,char sexo, String poder){
@@ -1054,7 +1059,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con año aparicion \" %d \" y autor \" %s \" \n",añoApricion,autor);
+            StdOut.printf("Eliminando con año aparicion \" %d \" y autor \" %s \" \n",añoAparicion,autor);
             lista.EliminarConAñoAparicionTal(añoAparicion);
             lista.EliminarConAutorTal(autor);
          }else
@@ -1082,7 +1087,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con año aparicion \" %d \" y comic \" %s \" \n",añoAparicion,comic);
             lista.EliminarConAñoAparicionTal(añoAparicion);
             lista.EliminarConComicTal(comic);
          }else
@@ -1096,7 +1101,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con año aparicion \" %d \" y afiliacion \" %s \" \n",añoAparicion,afiliacion);
             lista.EliminarConAñoAparicionTal(añoAparicion);
             lista.EliminarConAfiliacionTal(afiliacion);
         }else
@@ -1110,7 +1115,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con año aparicion \" %d \" y raza \" %s \" \n",añoAparicion,raza);
             lista.EliminarConAñoAparicionTal(añoAparicion);
             lista.EliminarConRazaTal(raza);
          }else
@@ -1124,7 +1129,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con autor \" %s \" y origen \" %s \" \n",autor,origen);
             lista.EliminarConAutorTal(autor);
             lista.EliminarConOrigenTal(origen);
         }else
@@ -1138,7 +1143,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con autor \" %s \" y comic \" %s \" \n",autor,comic);
             lista.EliminarConAutorTal(autor);
             lista.EliminarConComicTal(comic);
         }else
@@ -1152,7 +1157,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con autor \" %s \" y afiliacion \" %s \" \n",autor,afiliacion);
             lista.EliminarConAutorTal(autor);
             lista.EliminarConAfiliacionTal(afiliacion);
         }else
@@ -1162,10 +1167,11 @@ public class ListaCircular<E> implements Lista<E>{
     
     /** Método para obtener lista eliminando con autor y raza tal */
     
-    public  ListaCircular<E> ListaEliminandoConAutorYRazaTal(Lista <E>  listaOriginal,String autor, String raza){ListaCircular<E> lista = new ListaCircular();
+    public  ListaCircular<E> ListaEliminandoConAutorYRazaTal(Lista <E>  listaOriginal,String autor, String raza){
+        ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con autor \" %s \" y raza \" %s \" \n",autor,raza);
             lista.EliminarConAutorTal(autor);
             lista.EliminarConRazaTal(raza);
         }else
@@ -1179,7 +1185,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con origen \" %s \" y comic \" %s \" \n",origen,comic);
             lista.EliminarConOrigenTal(origen);
             lista.EliminarConComicTal(comic);
         }else
@@ -1193,7 +1199,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con origne \" %s \" y afiliacion \" %s \" \n",origen,afiliacion);
             lista.EliminarConOrigenTal(origen);
             lista.EliminarConAfiliacionTal(afiliacion);
         }else
@@ -1207,7 +1213,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con origen \" %s \" y raza \" %s \" \n",origen,raza);
             lista.EliminarConOrigenTal(origen);
             lista.EliminarConRazaTal(raza);
         }else
@@ -1221,7 +1227,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con comic \" %s \" y afiliación \" %s \" \n",comic,afiliacion);
             lista.EliminarConComicTal(comic);
             lista.EliminarConAfiliacionTal(afiliacion);
         }else
@@ -1235,7 +1241,7 @@ public class ListaCircular<E> implements Lista<E>{
         ListaCircular<E> lista = new ListaCircular();
         if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con comic \" %s \" y raza \" %s \" \n",comic,raza);
             lista.EliminarConComicTal(comic);
             lista.EliminarConRazaTal(raza);
         }else
@@ -1247,9 +1253,9 @@ public class ListaCircular<E> implements Lista<E>{
     
     public ListaCircular<E> ListaEliminandoConAfiliacionYRazaTal(Lista <E>  listaOriginal,String afiliacion, String raza){
        ListaCircular<E> lista = new ListaCircular();
-        if(!listaOriginal.estaVacia()){
+       if(!listaOriginal.estaVacia()){
             lista = (ListaCircular<E>) listaOriginal;
-            StdOut.printf("Eliminando con poder \" %s \" y afiliacion \" %s \" \n",poder,afiliacion);
+            StdOut.printf("Eliminando con afiliación \" %s \" y raza \" %s \" \n",afiliacion,raza);
             lista.EliminarConAfiliacionTal(afiliacion); 
             lista.EliminarConRazaTal(raza);
        }else

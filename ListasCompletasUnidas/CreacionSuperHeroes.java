@@ -8,6 +8,7 @@ import java.util.*;
 public class CreacionSuperHeroes
 {
    public static Vector<SuperHeroe> llenarSuperHeroes(){
+       
        /**Vector a retornar, que contiene a todos los superheroes*/
         
        Vector <SuperHeroe> SuperHeroes = new Vector <SuperHeroe>();
@@ -51,7 +52,6 @@ public class CreacionSuperHeroes
         SuperHeroe superwoman  = new SuperHeroe("Superwoman","Capacidad de regeneración,Transformar energia,Absorción de Energía Solar,Super Fuerza,Invulnerabilidad,Super Velocidad,Vuelo,Visión de Calor,Visión Aumentada",
                 'M',"Phil Jimenez","Lois Lane,Luma Lynai,Diana (Tierra-3),Kristin Wells,Dana Dearden,Lucy Lane,Lana Lang","Tierra-11",
                 "Action Comics,Justice League of America,Miracle Monday,Adventures of Superman,Supergirl,Superwoman","Liga de la Justicia","Superhumana",1943,1962,1964 ,2009 ,2016);
-        //SuperHeroe supergirl = new SuperHeroe("Superchica", poder, 0, autor, nombreReal, origen, comic, afiliacionActual, raza, añoAparicion)
         SuperHeroe superboy = new SuperHeroe("Superboy", "Los poderes de Superman, en menor nivel, tales como: Superfuerza, Super Velocidad, Vuelo, Invulnerabilidad, Factor Curativo, Visión Rayos X, Superoído, Visión Calórica, Aliento gélido, Telequinesia, Reflejos Aumentados", 'M'
                 , "Jerry Siegel", "Conner Kent,Kon-El", "Estados Unidos,Krypton", "More Fun Comics", "Justicia joven, Familia Superman, Titanes", "Kriptoniano,Humano",1945,1949);
         SuperHeroe darkseid = new SuperHeroe("Jefe del lado oscuro","Inmortalidad,Atributos físicos sobrehumanos,Intelecto sobrehumano,Efecto Omega y manipulación de la Energía,Omnipotencia,Teletransportación",'H'
@@ -67,7 +67,7 @@ public class CreacionSuperHeroes
         SuperHeroe acero = new SuperHeroe("El Hombre de Acero, Henry Johnson, Acero, Hombre de Acero, Hombre de Hierro.", "Genio ingeniero e inventor,Desarrolla armaduras con capacidades de:fuerza sobrehumana, durabilidad, resistencia y Vuelo,Varios otros armamentos cibernéticos,variedad de matrices de comunicación y sensores,ejerce un mazo aparentemente indestructible", 'H', "Louise Simonsony", "Dr. John Henry Irons", "Estados Unidos", "The Adventures of Superman", "Liga de la justicia,AmerTek Industries,Escuadrón Suicida,Laboratorios S.T.A.R,Infinity Inc", "Huamno", 1993);
         SuperHeroe volcana = new SuperHeroe("Volcana", "Control del fuego,Capacidad de escupir fuego,Generar gran cantidad de calor,Agilidad", 'M',"Bruce Timm", "Claire Selton", "Estados Unidos","Superman: la serie animada", "Sociedad Secreta de Supervillanos", "Humano",1996);
         SuperHeroe generalZod = new SuperHeroe("General Zod","\"Súper fuerza,Súper velocidad,Vuelo.Invulnerabilidad casi total,Súper oído,Visión telescópica y microscópica.Visión de rayos-x,Aliento helado,Visión calorífica,Visión infra roja,Visión espectro magnética,Factor de curación acelerada,Longevidad", 'H', "Robert Bernstein,George Papp", "Dru-Zod Corkript", "Krypton", "Adventure Comics", "", "Kriptoniano", 1961);
-//      SuperHeroe erradicador = new SuperHeroe("El Erradicador", "falta buscar esto", 'H', " Roger Stern", "David Conner", "Krypton", "Action Comics Annual", "", "Kritpniano", 1989);
+        SuperHeroe erradicador = new SuperHeroe("El Erradicador", "Preservar el ideal de la cultura kryptoniana", 'H', " Roger Stern", "David Conner", "Krypton", "Action Comics Annual", "", "Kritpniano", 1989);
         SuperHeroe doomsday = new SuperHeroe("  Doomsday, Juicio Final (en España), Chacal.", " Fuerza, velocidad, resistencia, y durabilidad sobrehumanas; Invulnerabilidad; Longevidad, Factor de Curación, la habilidad de resucitar.", 'H', "Dan Jurgens", "", "Krypton", "Superman: The Man of Steel ", "Sociedad Secreta de Supervillanos, Apokolips,", "Kriptoniano", 1992);
         
         /**
@@ -164,7 +164,8 @@ public class CreacionSuperHeroes
         SuperHeroes.add(cometa);
         SuperHeroes.add(acero);
         SuperHeroes.add(volcana); 
-        SuperHeroes.add(generalZod);  
+        SuperHeroes.add(generalZod);
+        SuperHeroes.add(erradicador);
         SuperHeroes.add(doomsday);
         SuperHeroes.add(batman);
         SuperHeroes.add(bluebird);
