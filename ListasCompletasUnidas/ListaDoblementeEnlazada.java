@@ -54,7 +54,7 @@ public class ListaDoblementeEnlazada<E> implements Lista <E>{
     /** Indica si la Lista está vacia */
     
     public boolean estaVacia() {
-        return cabeza != null;
+        return cabeza == null;
     }
 
     /** Enlaza dos nodos mediante enlace doble */

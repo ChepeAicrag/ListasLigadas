@@ -47,7 +47,7 @@ public class LinkedListPlusRecursividadGenerico<E> implements Lista<E>{
     /** Indica si la Lista está vacia */
     
     public boolean estaVacia(){
-        return raiz != null;
+        return raiz == null;
     }
     
     /** Si solo queremos el nodo que está antes*/
