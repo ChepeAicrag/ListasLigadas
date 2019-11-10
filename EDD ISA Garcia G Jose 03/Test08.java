@@ -4,7 +4,7 @@
  */
 public class Test08
 {
-   public static void main()throws Exception{
+   public static void main(String[]args)throws Exception{
        LinkedListPlusRecursividadGenerico <SuperHeroe >lista = new LinkedListPlusRecursividadGenerico();
        lista.LlenarListaDesdeArchivo("SuperHeroes"); 
            
