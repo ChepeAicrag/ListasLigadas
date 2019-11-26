@@ -19,12 +19,16 @@ public class LinkedListGG<E> implements Iterable<E>
     void add(E e) {
         if (head == null) {
             head = new Node<E>(e);
-        } else {
+        } else {/*
             Node<E> current = this.head;
             while (current.next != null) {
                 current = current.next;
             }
-            current.next = new Node<E>(e);
+            current.next = new Node<E>(e);*/
+            Node<E> last;
+            for(last = head; last.next != null;last = last.next){}
+            last.next = new Node(e);
+            
         }
         size++;
     }

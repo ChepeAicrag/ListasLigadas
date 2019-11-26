@@ -1,3 +1,5 @@
+
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -49,7 +51,6 @@ public class CopyOfLinkedList implements Iterable
     
     static private Animal getWhile(CopyOfLinkedList list, String key) {
         Node currNode = list.head;
-        
         while (currNode != null) {
             if (currNode.data.getNombre().equalsIgnoreCase(key)) {
                 return currNode.data;

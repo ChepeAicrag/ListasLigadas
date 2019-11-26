@@ -1,8 +1,7 @@
 public class ISC
 {
     static Queue<Animal> qA = new Queue<Animal>();
-    static Queue<Animal> qC = new Queue<Animal>();
-    
+    static Queue<Animal> qC = new Queue<Animal>();    
     static private Queue<Animal> copiarQ() {
         Queue<Animal> qB = new Queue();
         Queue<Animal> qC = new Queue();
@@ -12,12 +11,10 @@ public class ISC
             qB.enqueue(a);
             qC.enqueue(a);
         }
-        
         /** regresar los datos a la Queue original */
         for (Animal i : qB) {
             qA.enqueue(qB.dequeue());
         }
-        
         return qC;
     }
     
